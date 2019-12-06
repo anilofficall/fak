@@ -21,8 +21,8 @@ require('./util/eventLoader')(client);
 //////////////////////////////////////////////
 client.ayarlar = {
 "durum":"dnd",//online , idle , dnd 
-"oynuyor":"v!yardım Zaman ile değerlenecek buralar",
-"prefix":"v!",
+"oynuyor":"r!yardım Zaman ile değerlenecek buralar",
+"prefix":"r!",
 "sahip":"640615527890288641",
 "token":"NjUyNTExNDcwNTc5NjEzNzE2.Xeqc8Q.yRJPge4Bly1oHx8L9oIkhQixzFY"
 }
