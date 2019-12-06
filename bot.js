@@ -21,10 +21,10 @@ require('./util/eventLoader')(client);
 //////////////////////////////////////////////
 client.ayarlar = {
 "durum":"dnd",//online , idle , dnd 
-"oynuyor":"OYNUYOR METNI",
-"prefix":"PREFIXINIZ",
-"sahip":"SAHIP ID",
-"token":"TOKENINIZ"
+"oynuyor":"v!yardım Zaman ile değerlenecek buralar",
+"prefix":"v!",
+"sahip":"640615527890288641",
+"token":"NjUyNTExNDcwNTc5NjEzNzE2.Xeqc8Q.yRJPge4Bly1oHx8L9oIkhQixzFY"
 }
 /////////////////////////////////////////////
 
