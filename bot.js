@@ -169,3 +169,18 @@ client.on("guildMemberAdd", async member => {
 
 //// GUVENLIK SISTEMI SON ////
 client.login(client.ayarlar.token); 
+
+client.on("message", msg => {
+  if (!msg.guild) return;
+if (!kufurEngel[msg.guild.id]) return;
+  if (kufurEngel[msg.guild.id].küfürEngel === 'kapali') return;
+    if (kufurEngel[msg.guild.id].küfürEngel=== 'acik') {
+      const kufur = ["mk", "amk", "aq", "orospu", "oruspu", "oç", "sikerim", "yarrak", "piç", "amq", "sik", "amcık", "çocu", "sex", "seks", "amına", "orospu çocuğu", "sg", "siktir git"];
+  if (kufur.some(word => msg.content.toLowerCase().includes(word)) ) {
+    if (!msg.member.hasPermission("ADMINISTRATOR")) {
+      msg.delete()
+       msg.reply("Küfür filtresi, aktif!").then(message => message.delete(3000));
+    }
+}
+    }
+});
