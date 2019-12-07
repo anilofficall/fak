@@ -1,4 +1,4 @@
-const app = express();
+const app = d.express();
 const http = require('http');
     app.get("/", (request, response) => {
     console.log(`[PING] Açık tutuyorum...`);
