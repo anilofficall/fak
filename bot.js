@@ -1,4 +1,5 @@
-const app = d.express();
+const express = require('express')
+const app =express();
 const http = require('http');
     app.get("/", (request, response) => {
     console.log(`[PING] Açık tutuyorum...`);
@@ -7,7 +8,7 @@ const http = require('http');
     app.listen(process.env.PORT);
     setInterval(() => {
     http.get(`http://${process.env.PROJECT_DOMAIN}.glitch.me/`);
-    }, 280000);
+    }, 280000); 
 
 const pingDiscord = require('discord.js');
 const client = new pingDiscord.Client();
