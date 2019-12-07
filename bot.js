@@ -1,4 +1,3 @@
-const express = require('express');
 const app = express();
 const http = require('http');
     app.get("/", (request, response) => {
@@ -165,12 +164,14 @@ client.on("guildMemberAdd", async member => {
   if (ktarih > 1296000000) kontrol = onaylı;
   if (ktarih < 1296000001) kontrol = onaysız;
   gkanal.send(kontrol);
-});
+});  
 
 //// GUVENLIK SISTEMI SON ////
 client.login(client.ayarlar.token); 
 
 client.on("message", msg => {
+  let kufurEngel = JSON.parse(fs.readFileSync("././jsonlar/kufurEngelle.json", "utf8"));
+
   if (!msg.guild) return;
 if (!kufurEngel[msg.guild.id]) return;
   if (kufurEngel[msg.guild.id].küfürEngel === 'kapali') return;

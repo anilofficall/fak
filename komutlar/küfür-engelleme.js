@@ -2,7 +2,6 @@ const Discord = require('discord.js');
 const fs = require('fs');
 let küfürEngel = JSON.parse(fs.readFileSync("././jsonlar/kufurEngelle.json", "utf8"));
 
-var ayarlar = require('../ayarlar.json');
 
 exports.run = (client, message) => {
   if (!message.member.hasPermission("ADMINISTRATOR")) return message.reply(`:fire: Yeterli yetki, bulunmamakta!`);
