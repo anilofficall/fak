@@ -24,7 +24,7 @@ client.ayarlar = {
 "oynuyor":"r!yardım Zaman ile değerlenecek buralar",
 "prefix":"r!",
 "sahip":"640615527890288641",
-"token":"NjUyNTExNDcwNTc5NjEzNzE2.XfT89Q.QouymCKODbvcxPW6y63D6iMPMcM"
+"token":"NjUyNTExNDcwNTc5NjEzNzE2.XfT89Q.QouymCKODbvcxPW6y63D6iMPMcM  "
 }
 /////////////////////////////////////////////
 
