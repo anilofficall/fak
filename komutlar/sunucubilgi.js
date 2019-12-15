@@ -32,7 +32,7 @@ exports.run = (client, message) => {
 
 
    const embed = new Discord.RichEmbed()
-   .setColor("BLUE")
+   .setColor(client.ayarlar.renk)
    .setAuthor(message.guild.name, message.guild.iconURL)
    .setThumbnail(message.guild.iconURL)
    .addField('İsim kısaltması:', message.guild.nameAcronym, true)
@@ -51,11 +51,11 @@ exports.run = (client, message) => {
 
  
    const roller = new Discord.RichEmbed()
-   .setColor("BLUE")
+   .setColor(client.ayarlar.renk)
    .setDescription(`Tüm Roller: `+message.guild.roles.filter(r => r.name).map(r => r).join(', '))
    
    const emojiler = new Discord.RichEmbed()
-   .setColor("BLUE")
+   .setColor(client.ayarlar.renk)
    .setDescription(`Tüm Emojiler:`+ message.guild.emojis.map(e=>e.toString()).join(" "))
    message.channel.send({embed});
    message.channel.send(roller);

@@ -5,10 +5,13 @@ let botid = ('') //bu yere botun id'sini yapıştırın.
 
 exports.run = (client, message, args) => {
     const embed = new Discord.RichEmbed()
-    .setColor("RANDOM")
+    .setColor("36393F")
     .setAuthor(`${client.user.username} Yetkili Komutları`)
-    .addField('**r!küfür-engelle**', '```küfür-engelle <aç> veya <kapat> - Küfür engelleme sistemini, açıp kapatmanızı sağlar.```')//ne kadar yetkili komutunuz varsa o kadar .addField('prefix+komut', 'açıklama/kullanım amacı') koyun
-    .addField(`» Linkler`, `[Bot Davet Linki](https://discordapp.com/oauth2/authorize?client_id=${botid}&scope=bot&permissions=8) **|** [Destek Sunucusu](https://discord.gg/BAĞLANTI) **|** [Bota Oy Ver (Vote)](https://discordbots.org/bot/${botid}/vote) **|** [Web Sitesi]()`)//websiteniz yoksa  **|** [Web Sitesi]() yeri silebilirsiniz
+    .addField('**r!küfür-engelle**', '```küfür-engelle <aç> veya <kapat> - Küfür engelleme sistemini, açıp kapatmanızı sağlar.```')
+    .addField('**r!reklam-engelle**', '```reklam-engelle <aç> veya <kapat> - Link engelleme sistemini, açıp kapatmanızı sağlar.```')
+    .addField('**r!sunucupanel**', '```sunucupanel <kur> veya <kapat> - Sunucu Panel sistemini, açıp kapatmanızı sağlar.```')
+    .addField('**r!reklamtaraması**', '```reklamtaraması - Sunucudaki üyelerin oynuyorunda ve isimlerinde reklam arar.```')
+    .addField(`» Linkler`, `[Bot Davet Linki](https://discordapp.com/oauth2/authorize?client_id=${botid}&scope=bot&permissions=8) **|** [Destek Sunucusu](https://discord.gg/BAĞLANTI) **|** [Bota Oy Ver (Vote)](https://discordbots.org/bot/${botid}/vote)`)
     message.channel.sendEmbed(embed);
 
 };

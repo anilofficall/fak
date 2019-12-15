@@ -23,7 +23,7 @@ client.ayarlar = {
 "durum":"dnd",//online , idle , dnd 
 "oynuyor":"r!yardım Zaman ile değerlenecek buralar",
 "prefix":"r!",
-"renk": "BLUE",
+"renk": "36393F",
 "sahip":"640615527890288641",
 "token":"NjUyNTExNDcwNTc5NjEzNzE2.XfT89Q.QouymCKODbvcxPW6y63D6iMPMcM  "
 }
@@ -233,5 +233,24 @@ client.channels.get(serverStats.botCountID).setName(`Bot Sayısı » ${guild.mem
       }, 5000)
 });
 
-    
+ client.on("message", msg => { 
+    if (msg.channel.type == "dm") return;
+    const linkEngel = db.fetch(`reklamKuvars_${msg.guild.id}`)
+    if (linkEngel) {
+        var reg = new RegExp("^(http[s]?:\\/\\/(www\\.)?|ftp:\\/\\/(www\\.)?|www\\.){1}([0-9A-Za-z-\\.@:%_\+~#=]+)+((\\.[a-zA-Z]{2,3})+)(/(.)*)?(\\?(.)*)?");
+        if (reg.test(msg.content)) {
+        if (msg.member.permissions.has("BAN_MEMBERS")) return;
+        msg.delete()
+        return msg.channel.send("reklam niye yapıyon oç").then(message => message.delete(5000));
+    }
+
+    }
+   var g = [".cf", ".gg", ".me",".com",".io",".tk",".ml",".ga",".gq",".com",".net",".org",".biz",".info",".eu",".nl",".tv",".cc",".me",".mobi",".name",".ws", ".academy",".accountant",".accountants",".xyz",".actor",".agency",".apartments",".apartments",".bilgi",".garden",".xyz", ".gov"]
+if (g.some(word => msg.content.toLowerCase().includes(word))) {
+if (msg.member.permissions.has("BAN_MEMBERS")) return;
+        msg.delete()
+        return msg.channel.send("reklam niye yapıyon oç").then(message => message.delete(5000));
+}
+});
+
 client.login(client.ayarlar.token); 

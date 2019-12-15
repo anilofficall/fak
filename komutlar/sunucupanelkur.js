@@ -64,7 +64,7 @@ const embed = new Discord.RichEmbed()
   })
   }
   
-  if (args[0] == 'sil') {
+  if (args[0] == 'kapat') {
     const embed = new Discord.RichEmbed()
     .setColor(client.ayarlar.renk)
     .setDescription(`**Hata:** Sunucu istatiği zaten ayarlanmamış.`)
