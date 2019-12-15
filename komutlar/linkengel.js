@@ -1,63 +1,42 @@
 const Discord = require('discord.js');
 const fs = require('fs');
-let linkEngel = JSON.parse(fs.readFileSync("././jsonlar/linkEngelle.json", "utf8"));
+const veri = require("quick.db")
 
-exports.run = async (client, message) => {
-  if (!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send('Bu komutu kullanabilmek için `Yönetici` yetkisine sahip olmalısın!')
 
-	let args = message.content.split(' ').slice(1);
-	const secenekler = args.slice(0).join(' ');
+exports.run = (client, message, args) => {
+  if (!message.member.hasPermission("BAN_MEMBERS")) return message.reply(`:fire: Yeterli yetki, bulunmamakta!`);
 
-	if(secenekler.length < 1) return message.reply("**Açmak İstiyorsan:**```!linkengelle aç``` **Kapatmak İstiyorsan:**```+linkengelle kapat``` **yaz!**");
+    const secenekler = args.slice(0).join(' ');
 
-  if (secenekler !== "aç" && secenekler !== "kapat" && secenekler !== "on" && secenekler !== "off") return message.reply("**Açmak İstiyorsan:**```!link-engelle aç``` **Kapatmak İstiyorsan:**```!link-engelle kapat``` **yaz!**")
+    var errembed = new Discord.RichEmbed()
+    .setColor("RANDOM")
+    .setDescription(`Yanlış kullanım tespit edildi!`)
+    if(secenekler.length < 1) return message.channel.send(errembed);
+    if(secenekler.length < 1) return message.reply("Aktif hale getirmek için r!reklam-engelle aç & r!reklam-engelle kapat").then(m => m.delete(10000));
 
-	if (secenekler === "aç" || secenekler === "on") {
-		
-      
-    
-		message.reply(":white_check_mark: **İşlem Başarılı: Link Engelle Açıldı!**")
-    
-  if(!linkEngel[message.guild.id]){
-		linkEngel[message.guild.id] = {
-			linkEngel: "acik"
-		  };
-  };
+   if (secenekler === "aç") {
+        if (veri.has(`reklamKuvars_${message.guild.id}`)) return message.channel.send("Zaten bu özellik açık!")
+        message.channel.send(`Reklam filtresi, aktif hale getirildi!`).then(m => m.delete(5000));
+        veri.set(`reklamKuvars_${message.guild.id}`, "acik")
+    };
 
-		  fs.writeFile("././jsonlar/linkEngelle.json", JSON.stringify(linkEngel), (x) => {
-        if (x) console.error(x)
-      })
-	};
-
-	if (secenekler === "kapat" || secenekler === "off") {
-    
-               if(!linkEngel[message.guild.id]){
-		linkEngel[message.guild.id] = {
-			linkEngel: "kapali"
-		  };
-  };
-
-		fs.writeFile("././jsonlar/linkEngelle.json", JSON.stringify(linkEngel), (x) => {
-        if (x) console.error(x)
-      })
-
-       delete linkEngel[message.guild.id]
-       delete linkEngel[message.guild.id].linkEngel
-
-		message.channel.send(":white_check_mark: **İşlem Başarılı: Link Engelle Kapandı!**")
-    
-	};
+    if (secenekler === "kapat") {
+        if (!veri.has(`reklamKuvars_${message.guild.id}`)) return message.channel.send("Zaten bu özellik kapalı!")
+        message.channel.send(`Reklam filtresi, deaktif hale getirildi!`).then(m => m.delete(5000));
+        veri.delete(`reklamKuvars_${message.guild.id}`)
+    };
 }
 
 exports.conf = {
-		enabled: true,
-		guildOnly: false,
-		aliases: ['reklamengelle'],
-		permLevel: 0
-	  };
-	  
+  enabled: true,
+  guildOnly: false,
+  aliases: ['reklam-engel'],
+  permLevel: 0
+};
+      
 exports.help = {
-		name: 'link-engelle',
-		description: 'Link engelleme sistemini açıp kapatmanızı sağlar.',
-		usage: 'link-engelle <aç/kapat>'
-	};
+  name: 'reklam-engelle',
+  description: 'reklam engelleme sistemini, açıp kapatmanızı sağlar.',
+  usage: 'reklam-engelle <aç> veya <kapat>'
+};
+   

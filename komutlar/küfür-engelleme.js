@@ -12,17 +12,16 @@ exports.run = (client, message, args) => {
     .setColor("RANDOM")
     .setDescription(`Yanlış kullanım tespit edildi!`)
     if(secenekler.length < 1) return message.channel.send(errembed);
-  if(secenekler.length < 1) return message.reply("Aktif hale getirmek için v!küfür-engelle aç & v!küfür-engelle kapat").then(m => m.delete(10000));
+    if(secenekler.length < 1) return message.reply("Aktif hale getirmek için r!küfür-engelle aç & r!küfür-engelle kapat").then(m => m.delete(10000));
 
-    message.delete();
-
-            if (secenekler === "aç") {
+   if (secenekler === "aç") {
+        if (veri.has(`kufurKuvars_${message.guild.id}`)) return message.channel.send("Zaten bu özellik açık!")
         message.channel.send(`Küfür filtresi, aktif hale getirildi!`).then(m => m.delete(5000));
         veri.set(`kufurKuvars_${message.guild.id}`, "acik")
     };
 
     if (secenekler === "kapat") {
-        if (!veri.has(`kufurKuvars_${message.guild.id}`))
+        if (!veri.has(`kufurKuvars_${message.guild.id}`)) return message.channel.send("Zaten bu özellik kapalı!")
         message.channel.send(`Küfür filtresi, deaktif hale getirildi!`).then(m => m.delete(5000));
         veri.delete(`kufurKuvars_${message.guild.id}`)
     };

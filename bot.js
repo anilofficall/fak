@@ -136,12 +136,12 @@ let mkanal = client.channels.get(db.fetch(`yazilihgbb_${member.guild.id}`))
  if(member.user.bot === true) return;
 mkanal.send(`**${member.user.username}** suncudan ayrıldı, puffff.`);
 });
-//// YAZILI GIRIS CIKIS SON ////
+
 
 //// OTOROL BASLANGIC ////
 
 client.on("guildMemberAdd", async member => {
-  if (member.user.bot === true) return;
+
   let rolisim = await db.fetch(`otorolisim_${member.guild.id}`);
   let kanal = db.fetch(`otorolKanal_${member.guild.id}`);
   let rolid = await db.fetch(`otorol_${member.guild.id}`);
@@ -149,8 +149,6 @@ client.on("guildMemberAdd", async member => {
     bilgiKanal.send(`:new: \`${member.user.tag}\` adlı kullanıcıya **${rolisim}** adlı rol verildi.` );
    member.addRole(rolid);
 });
-
-//// OTOROL SON ////
 
 //// GUVENLIK SISTEMI BASLANGIC ///
 
@@ -167,9 +165,9 @@ client.on("guildMemberAdd", async member => {
   gkanal.send(kontrol);
 });  
 
-//// GUVENLIK SISTEMI SON ////
-client.login(client.ayarlar.token); 
 
+
+// KÜFÜR ENGEL
 client.on("message", msg => {
     let kufurEngel = db.fetch(`kufurKuvars_${msg.guild.id}`)
     if (!msg.guild) return;
@@ -192,3 +190,4 @@ client.on("message", msg => {
     }
 });
 
+client.login(client.ayarlar.token); 
