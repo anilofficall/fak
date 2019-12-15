@@ -23,7 +23,7 @@ client.ayarlar = {
 "durum":"dnd",//online , idle , dnd 
 "oynuyor":"r!yardım Zaman ile değerlenecek buralar",
 "prefix":"r!",
-ren
+"renk": "BLUE",
 "sahip":"640615527890288641",
 "token":"NjUyNTExNDcwNTc5NjEzNzE2.XfT89Q.QouymCKODbvcxPW6y63D6iMPMcM  "
 }
