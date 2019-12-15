@@ -1,12 +1,13 @@
 const Discord = require('discord.js');
 const db = require("quick.db")
 exports.run = async(client, message, args) => {
-    
+    if (!message.member.hasPermission("MANAGE_CHANNELS")) return message.reply(`:fire: Yeterli yetki, bulunmamakta!`);
 const embed = new Discord.RichEmbed()
+    
     .setColor(client.ayarlar.renk)
-    .setDescription(`**Doğru Kullanım:** !sunucupanel kur/sil`)
+    .setDescription(`**Doğru Kullanım:** !sunucupanel kur/kapat`)
   if (!args[0]) return message.channel.send(embed)
-  if (args[0] !== 'kur' && args[0] !== 'sil') return message.channel.send(embed)
+  if (args[0] !== 'kur' && args[0] !== 'kapat') return message.channel.send(embed)
   
   if (args[0] == 'kur') {
     const embed = new Discord.RichEmbed()

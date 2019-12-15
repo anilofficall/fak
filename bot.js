@@ -154,6 +154,7 @@ client.on("guildMemberAdd", async member => {
 //// GUVENLIK SISTEMI BASLANGIC ///
 
 client.on("guildMemberAdd", async member => {
+  if (!db.has(`guard_${member.guild.id}`)) return;
   let gkisi = client.users.get(member.id);
   let gkanal = client.channels.get(db.fetch(`guard_${member.guild.id}`));
   let onaylı = `:ballot_box_with_check:  ${member},  **Güvenlik** sistemine takılmadı.`
