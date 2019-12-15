@@ -23,6 +23,7 @@ client.ayarlar = {
 "durum":"dnd",//online , idle , dnd 
 "oynuyor":"r!yardım Zaman ile değerlenecek buralar",
 "prefix":"r!",
+ren
 "sahip":"640615527890288641",
 "token":"NjUyNTExNDcwNTc5NjEzNzE2.XfT89Q.QouymCKODbvcxPW6y63D6iMPMcM  "
 }
@@ -189,5 +190,48 @@ client.on("message", msg => {
     
     }
 });
+client.on('ready', () => {
+    setInterval(() => {
+      
+      let guild = client.guilds.forEach(c => c)
+ const guildArray = client.guilds.array()
+  while (guildArray.length) {
+    
+    const guilds = guildArray.splice(0,25);
+    for (const guild of guilds) {
+      const totalm = db.fetch(`üyekanal_${guild.id}`);
+const memberss = db.fetch(`kulkanal_${guild.id}`);
+const botscont = db.fetch(`neblmkanal_${guild.id}`);
+// GEREKLİ YERLER
+const serverStats = {
+  guildID: guild.id,
+  totalUsersID: totalm,
+  memberCountID: memberss,
+  botCountID: botscont
+};
+  if (db.fetch(`supanel_${guild.id}`) == "aktif") {
+if (guild.id !== serverStats.guildID) return;
+if (!guild.channels.get(totalm)) return console.log("Hata kanal ismi değişmiyor amk")
+let aktif = guild.members.filter(m => m.presence.status !== "offline").size
+let rekoronline = db.fetch(`rekoronlineS_${guild.id}`);
+client.channels.get(serverStats.totalUsersID).setName(`Toplam Kullanıcı » ${guild.memberCount} `);
+client.channels.get(db.fetch(`rekoronlineK_${guild.id}`)).setName(`Rekor Online » ${db.fetch(`rekoronlineS_${guild.id}`)}`);
+client.channels.get(serverStats.memberCountID).setName(`Aktif Üye » ${guild.members.filter(m => m.presence.status !== "offline").size}`);
+client.channels.get(serverStats.botCountID).setName(`Bot Sayısı » ${guild.members.filter(m => m.user.bot).size}`);
+    if(aktif > rekoronline) {
+    db.set(`rekoronlineS_${guild.id}`, aktif)
+   client.channels.get(serverStats.onlineUsers).setName(`Rekor Online » ${guild.members.filter(m => m.presence.status !== "offline").size}`)
+  }
+  } else {
+    return;
+  }
 
+    }
+
+
+  }
+      }, 5000)
+});
+
+    
 client.login(client.ayarlar.token); 
