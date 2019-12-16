@@ -8,7 +8,7 @@ exports.run = (client, message, args) => {
     .setColor("RANDOM")
     .setAuthor(`${client.user.username} Eğlence Komutları`)
     .addField('**r!havadurumu**', '```Hava Durumunu Gösterir.```')//ne kadar eğlence komutunuz varsa o kadar .addField('prefix+komut', 'açıklama/kullanım amacı') koyun
-    .addField('**r!avatar**', '```Slot Machine.```')
+    .addField('**r!avatar**', '```Profil Resminizi Atar..```')
     .addField('**r!kaçcm**', '```Malatafının Kaç Cm olduğunu Söyler.```')
     .addField(`» Linkler`, `[Bot Davet Linki](https://discordapp.com/oauth2/authorize?client_id=652511470579613716${botid}&scope=bot&permissions=8) **|** [Destek Sunucusu](https://discord.gg/BAĞLANTI) **|** [Bota Oy Ver (Vote)](https://discordbots.org/bot/${botid}/vote) **|** [Web Sitesi]()`)//websiteniz yoksa  **|** [Web Sitesi]() yeri silebilirsiniz
     message.channel.sendEmbed(embed);
