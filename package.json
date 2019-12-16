@@ -2,7 +2,7 @@
   "//1": "describes your app and its dependencies",
   "//2": "https://docs.npmjs.com/files/package.json",
   "//3": "updating this file will download and update your packages",
-  "name": "Kıvars",
+  "name": "Kivars",
   "version": "1.0.0",
   "description": "Juars.",
   "main": "bot.js",
