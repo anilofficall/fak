@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const weather = require('weather-js');
-
+  
 exports.run = (client, message, params) => {
   message.channel.send(':diamond_shape_with_a_dot_inside: **Senin Şanslı Sayın** :diamond_shape_with_a_dot_inside: ')
     number = 8,2,4,1,5,6,7,10,12,13,15,11,8,9,14,19,20,17,16
