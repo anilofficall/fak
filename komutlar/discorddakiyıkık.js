@@ -17,7 +17,7 @@ exports.run = function(client, message, args) {
 exports.conf = {
   enabled: true,
   guildOnly: false,
-  aliases: ["çekilişyap"],
+  aliases: ["yıkıkbul"],
   permLevel: 2
 };
 
