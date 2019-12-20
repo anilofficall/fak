@@ -185,7 +185,7 @@ client.on("message", msg => {
       if (kufur.some(word => msg.content.toLowerCase().startsWith(word + " ")) ) {
       if (!msg.member.hasPermission("BAN_MEMBERS")) {
       msg.delete()
-      return msg.reply("Küfür filtresi, aktif!").then(message => message.delete(3000));
+      return msg.reply("Küfür filtresi, aktif! client.emojis.get(427409582915059712) ").then(message => message.delete(3000));
     }
 }  
     
@@ -250,7 +250,7 @@ client.channels.get(serverStats.botCountID).setName(`Bot Sayısı » ${guild.mem
 if (g.some(word => msg.content.toLowerCase().includes(word))) {
 if (msg.member.permissions.has("BAN_MEMBERS")) return;
         msg.delete()
-        return msg.channel.send("reklam niye yapıyon oç").then(message => message.delete(5000));
+        return msg.channel.send("Hey Bu Sunucuda Reklam Yasak  ").then(message => message.delete(5000));
 }
 });
 
