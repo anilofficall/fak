@@ -185,7 +185,7 @@ client.on("message", msg => {
       if (kufur.some(word => msg.content.toLowerCase().startsWith(word + " ")) ) {
       if (!msg.member.hasPermission("BAN_MEMBERS")) {
       msg.delete()
-      return msg.reply("Küfür filtresi, aktif! client.emojis.get(427409582915059712) ").then(message => message.delete(3000));
+      return msg.reply("Küfür filtresi, aktif!  ").then(message => message.delete(3000));
     }
 }  
     
