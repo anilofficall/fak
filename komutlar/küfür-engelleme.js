@@ -15,7 +15,7 @@ exports.run = (client, message, args) => {
     if(secenekler.length < 1) return message.reply("Aktif hale getirmek için r!küfür-engelle aç & r!küfür-engelle kapat").then(m => m.delete(10000));
 
    if (secenekler === "aç") {
-        if (veri.has(`kufurKuvars_${message.guild.id}`)) return message.channel.send("+client.emojis.get("647223287696326657)Zaten bu özellik açık!")
+        if (veri.has(`kufurKuvars_${message.guild.id}`)) return message.channel.send("client.emojis.get("647223287696326657") + ""Zaten bu özellik açık!" 
 
         message.channel.send(`Küfür filtresi, aktif hale getirildi!`).then(m => m.delete(5000));
         veri.set(`kufurKuvars_${message.guild.id}`, "acik")
