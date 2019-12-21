@@ -22,7 +22,7 @@ exports.run = (client, message, args) => {
     };
 
     if (secenekler === "kapat") {
-        if (!veri.has(`kufurKuvars_${message.guild.id}`)) return message.channel.send("Zaten bu özellik kapalı!")
+        if (!veri.has(`kufurKuvars_${message.guild.id}`)) return message.channel.send(client.emojis.get("627217315389374488") + "Zaten bu özellik kapalı!")
         message.channel.send(`Küfür filtresi, deaktif hale getirildi!`).then(m => m.delete(5000));
         veri.delete(`kufurKuvars_${message.guild.id}`)
     };
