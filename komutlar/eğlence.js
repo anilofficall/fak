@@ -14,6 +14,7 @@ exports.run = (client, message, args) => {
     .addField('**r!fbi**', '```Fbi Open The door.```') 
       .addField('**r!kafanasınasık**', '```İstediğiniz Kişinin Kafasına Sıkar.```')
       .addField('**r!kavgaet**', '```Kavga Edersiniz.```')
+    .addField('**r!korkut**', '```İnsanları Korkut.```')
     .addField(`» Linkler`, `[Bot Davet Linki](https://discordapp.com/oauth2/authorize?client_id=652511470579613716${botid}&scope=bot&permissions=8) **|** [Destek Sunucusu](https://discord.gg/BAĞLANTI) **|** [Bota Oy Ver (Vote)](https://discordbots.org/bot/${botid}/vote) **|** [Web Sitesi]()`)//websiteniz yoksa  **|** [Web Sitesi]() yeri silebilirsiniz
     message.channel.sendEmbed(embed);
 

@@ -23,7 +23,7 @@ exports.conf = {
 };
 
 exports.help = {
-  name: 'eğlence',
+  name: 'genel',
   description: '',
   usage: ''
 };
