@@ -18,7 +18,7 @@ module.exports.run = async(client, message, args) => {
     .addField(':desktop: Bellek kullanımı:', (process.memoryUsage().heapUsed / 2048 / 2048).toFixed(2))
     .addField(':book: Kütüphanesi;', `Discord.js`)
     .addField(`<:imagewqes:601526918961037313> Discord.js sürümü:`, Discord.version)
-      .addField(':spy: Yapımcım:', '<@407240241209147393> \n `Elwasy#3071`')
+      .addField(':spy: Yapımcım:', '<@640615527890288641> \n `ΛЯGФ ~ jUaRs KiM AmK ? ✞#4202`')
       .addField(':paperclip: Botun Başlanma Zamanı:', "Bot **18.04.2019**'de yapılmaya başlanmıştır")
     .setFooter('Asistan Bot', client.user.avatarURL)
     .setTimestamp()
