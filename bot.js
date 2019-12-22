@@ -114,12 +114,9 @@ client.elevation = message => {
 client.on('ready', () => {
     setInterval(() => {
       
-      let guild = client.guilds.forEach(c => c)
- const guildArray = client.guilds.array()
-  while (guildArray.length) {
+      client.guilds.forEach(guild => {
+ 
     
-    const guilds = guildArray.splice(0,25);
-    for (const guild of guilds) {
       const totalm = db.fetch(`üyekanal_${guild.id}`);
 const memberss = db.fetch(`kulkanal_${guild.id}`);
 const botscont = db.fetch(`neblmkanal_${guild.id}`);
@@ -157,11 +154,11 @@ client.channels.get(db.fetch(`sesliK_${guild.id}`)).setName(`Sesli • ${count}`
     return;
   }
 
-    }
+    
+})
 
-
-  }
-      }, 5000)
+  
+      }, 1000)
 });
 
 
