@@ -3,7 +3,7 @@ const db = require('quick.db');
 
 exports.run = async(client, message, args) => {
   
-  if (args[0] == 'kur') {
+  
     const embed = new Discord.RichEmbed()
     .setColor(client.ayarlar.renk)
     .setDescription(client.emojis.get("647733808447225866") + `| **Hata:** Sunucu istatiği zaten ayarlanmış.`)
@@ -57,7 +57,7 @@ exports.run = async(client, message, args) => {
   })
         })
   })
-  }
+  
   
   
 };
@@ -66,7 +66,7 @@ exports.conf = {
   enabled: true, 
   guildOnly: false, 
   aliases: [], 
-  permLevel: 4
+  permLevel: 3
 };
 
 exports.help = {
