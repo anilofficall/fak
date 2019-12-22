@@ -130,18 +130,28 @@ const serverStats = {
   memberCountID: memberss,
   botCountID: botscont
 };
+      
+       
+  const voiceChannels = guild.channels.filter(c => c.type === 'voice');
+    let count = 0;
+  
+    for (const [id, voiceChannel] of voiceChannels) count += voiceChannel.members.size;
+      
+      
   if (db.fetch(`supanel_${guild.id}`) == "aktif") {
 if (guild.id !== serverStats.guildID) return;
 if (!guild.channels.get(totalm)) return console.log("Hata kanal ismi değişmiyor amk")
 let aktif = guild.members.filter(m => m.presence.status !== "offline").size
 let rekoronline = db.fetch(`rekoronlineS_${guild.id}`);
-client.channels.get(serverStats.totalUsersID).setName(`Toplam Kullanıcı » ${guild.memberCount} `);
-client.channels.get(db.fetch(`rekoronlineK_${guild.id}`)).setName(`Rekor Online » ${db.fetch(`rekoronlineS_${guild.id}`)}`);
-client.channels.get(serverStats.memberCountID).setName(`Aktif Üye » ${guild.members.filter(m => m.presence.status !== "offline").size}`);
-client.channels.get(serverStats.botCountID).setName(`Bot Sayısı » ${guild.members.filter(m => m.user.bot).size}`);
+client.channels.get(serverStats.totalUsersID).setName(`Toplam Üye • ${guild.memberCount} `);
+client.channels.get(db.fetch(`rekoronlineK_${guild.id}`)).setName(`Rekor Online • ${db.fetch(`rekoronlineS_${guild.id}`)}`);
+client.channels.get(serverStats.memberCountID).setName(`Çevrimiçi Üye • ${guild.members.filter(m => m.presence.status !== "offline").size}`);
+client.channels.get(serverStats.botCountID).setName(`Botlar • ${guild.members.filter(m => m.user.bot).size}`);
+client.channels.get(db.fetch(`sesliK_${guild.id}`)).setName(`Sesli • ${count}`);
+
     if(aktif > rekoronline) {
     db.set(`rekoronlineS_${guild.id}`, aktif)
-   client.channels.get(serverStats.onlineUsers).setName(`Rekor Online » ${guild.members.filter(m => m.presence.status !== "offline").size}`)
+   client.channels.get(serverStats.onlineUsers).setName(`Rekor Online  ${guild.members.filter(m => m.presence.status !== "offline").size}`)
   }
   } else {
     return;

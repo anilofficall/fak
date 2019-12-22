@@ -21,7 +21,7 @@ module.exports = message => {
     pingEsya = client.commands.get(client.aliases.get(komut));
   }
   if (pingEsya) {
-    if (pingYetkileri < pingEsya.conf.permLevel) return;
+    if (pingYetkileri < pingEsya.conf.permLevel) return message.channel.send("Yetersiz yetki!");
     pingEsya.run(client, message, params, pingYetkileri);
   }
 };
