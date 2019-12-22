@@ -18,19 +18,18 @@ const db = require("quick.db")
 const moment = require('moment');
 require('./util/eventLoader')(client);
 
-//////////////////////////////////////////////
+
 client.ayarlar = {
 "durum":"dnd",//online , idle , dnd 
-"oynuyor":"r!yardım Zaman ile değerlenecek buralar",
-"prefix":"r!",
+"oynuyor":"st!yardım | ",
+"prefix":"st!",
 "renk": "36393F",
-"sahip":"640615527890288641",
 "token":"NjUyNTExNDcwNTc5NjEzNzE2.XfT89Q.QouymCKODbvcxPW6y63D6iMPMcM"
 }
-/////////////////////////////////////////////
+
 
 const kurulum = message => {
-  console.log(`Kurulum: ${message}`);
+  console.log(`${message} yüklendi.`);
 };
 
 client.commands = new pingDiscord.Collection();
