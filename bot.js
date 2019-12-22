@@ -21,7 +21,7 @@ require('./util/eventLoader')(client);
 
 client.ayarlar = {
 "durum":"dnd",//online , idle , dnd 
-"oynuyor":"st!yardım | ",
+"oynuyor":"st!yardım | ST-AT",
 "prefix":"st!",
 "renk": "36393F",
 "token":"NjUyNTExNDcwNTc5NjEzNzE2.XfT89Q.QouymCKODbvcxPW6y63D6iMPMcM"
