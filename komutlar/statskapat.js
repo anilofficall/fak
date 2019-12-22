@@ -14,12 +14,13 @@ exports.run = async(client, message, args) => {
     let kul2 = message.guild.channels.get(kul)    
     let neblm2 = message.guild.channels.get(neblm)
     let neblm3 = message.guild.channels.get(neblm31)
-
+    let kul22 = message.guild.channels.get(await db.fetch(`sesliK_${message.guild.id}`))
         let neblm313 = message.guild.channels.get(neblm3123)
 
     üye2.delete()
     neblm3.delete()
     kul2.delete()
+  kul22.delete()
     neblm2.delete()
     neblm313.delete()
     
@@ -27,6 +28,7 @@ exports.run = async(client, message, args) => {
     db.delete(`kulkanal_${message.guild.id}`)
     db.delete(`rekoronlineK_${message.guild.id}`)
 db.delete(`rekoronlineS_${message.guild.id}`)
+  db.delete(`sesliK_${message.guild.id}`)
     db.delete(`suKategori_${message.guild.id}`)
     db.delete(`supanel_${message.guild.id}`)
 

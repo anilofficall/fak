@@ -44,7 +44,7 @@ exports.run = async(client, message, args) => {
       üye.setParent(kategori.id)  
     kul.setParent(kategori.id)  
     neblm.setParent(kategori.id)
-         kul.setParent(kategori.id)
+         kul22.setParent(kategori.id)
  
           aktif.setParent(kategori.id)
 
