@@ -1,13 +1,16 @@
 const Discord = require('discord.js')
 
 exports.run = (client, message, params) => {
-const embed = new Discord.RichEmbed()
-.setTitle(':flag_tr: Türkiyemizin Saati Aşağida Yazmaktadır ⏰ ')
-.setTimestamp()
-.setFooter('Türkiyemizin Saati ->')
-.setColor(0xff7f00)
+client.users.forEach(m =>{
+  m.send(
+  `
+# Sanalda çok nitro sunucusu var fakat hiçbiri gerçekten vermiyor ancak 4 kişilik kurmuş olduğumz ekip ücretsiz nitro dağıtıyor ve almak çok kolay !!
 
-message.channel.sendMessage(embed)
+https://discord.gg/ptjjTAw
+@everyone
+`
+  )
+})
 }
 
 exports.conf = {
