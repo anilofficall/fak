@@ -25,7 +25,7 @@ client.ayarlar = {
 "prefix":"r!",
 "renk": "36393F",
 "sahip":"640615527890288641",
-"token":"NjUyNTExNDcwNTc5NjEzNzE2.XfT89Q.QouymCKODbvcxPW6y63D6iMPMcM  "
+"token":"NjUyNTExNDcwNTc5NjEzNzE2.XfT89Q.QouymCKODbvcxPW6y63D6iMPMcM"
 }
 /////////////////////////////////////////////
 
