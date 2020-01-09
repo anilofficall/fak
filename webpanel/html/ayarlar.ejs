@@ -1231,7 +1231,7 @@ body.swal2-no-backdrop .swal2-shown {
 </nav>
  <div class="content" style="background-color: #363940;">
 <div class="container-fluid">
-<form action="yonet?sunucu=<%=guild.id%>" method="post">
+<form action="/yonet?sunucu=<%=guild.id%>" method="post">
 <%if (bot.ayar.has(`supanel_${guild.id}`)) {%>
 <div class="row">
 <div class="col-md-6">
@@ -1240,10 +1240,10 @@ body.swal2-no-backdrop .swal2-shown {
 Toplam Üye Kanal İsmi
 </div>
 <div class="card-body">
-<% if (bot.ayar.has(`üyekanal_${guild.id}`)  == false) {%> 
+<% if (bot.ayar.has(`üyekanalN_${guild.id}`)  == false) {%> 
 <p><span class="bmd-form-group"><input type="text" class="form-control" id="uye" name="uye" placeholder="Toplam Üye •"></span></p>
 <%} else {%>
-<p><span class="bmd-form-group"><input type="text" class="form-control" id="uye" name="uye" value="<%bot.ayar.fetch(`üyekanal_${guild.id}`)%>" placeholder="Toplam Üye •"></span></p>
+<p><span class="bmd-form-group"><input type="text" class="form-control" id="uye" name="uye" value="<%bot.ayar.fetch(`üyekanalN_${guild.id}`)%>" placeholder="Toplam Üye •"></span></p>
 <%}%>
 </div>
 </div>
@@ -1295,9 +1295,9 @@ Sesli Kanal İsmi
 </div>
 <div class="card-body">
 <% if (bot.ayar.has(`sesliN_${guild.id}`)  == false) {%> 
-<p><span class="bmd-form-group"><input type="text" class="form-control" id="sesliK" name="sesliK" placeholder="Sesli •"></span></p>
+<p><span class="bmd-form-group"><input type="text" class="form-control" id="sesli" name="sesli" placeholder="Sesli •"></span></p>
 <%} else {%>
-<p><span class="bmd-form-group"><input type="text" class="form-control" id="sesliK" name="sesliK" value="<%bot.ayar.fetch(`sesliN_${guild.id}`)%>" placeholder="Sesli •"></span></p>
+<p><span class="bmd-form-group"><input type="text" class="form-control" id="sesli" name="sesli" value="<%bot.ayar.fetch(`sesliN_${guild.id}`)%>" placeholder="Sesli •"></span></p>
 <%}%>
 </div>
 </div>

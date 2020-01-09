@@ -192,13 +192,12 @@ res.redirect("/anasayfa");
   app.post("/yonet", girisGerekli, async(req, res) => {
 const guild = client.guilds.get(req.query.sunucu);
       const sunucu = client.guilds.get(req.query.sunucu);
-      
+     let ayar = req.body      
     if (!guild) return res.json({"hata":"Bot "+req.query.sunucu+" ID adresine sahip bir sunucuda bulunmuyor."});
     const isManaged = guild && !!guild.member(req.user.id) ? guild.member(req.user.id).permissions.has("MANAGE_GUILD") : false;
     if (!isManaged && !req.session.isAdmin) return res.json({"hata":"Bu sunucuda Sunucuyu Yönet iznin bulunmuyor. Bu yüzden bu sayfaya erişim sağlayamazsın."});
-     if (db.has(`supanel_${guild.id}`)) {
-       
-  const voiceChannels = guild.channels.filter(c => c.type === 'voice');
+     if (!db.has(`supanel_${guild.id}`)) {
+    const voiceChannels = guild.channels.filter(c => c.type === 'voice');
     let count = 0;
   
     for (const [id, voiceChannel] of voiceChannels) count += voiceChannel.members.size;
@@ -258,6 +257,26 @@ const guild = client.guilds.get(req.query.sunucu);
         })
   })
   
+     } else {
+       
+       if (ayar["uye"]) {
+          client.ayar.set(`üyekanalN_${guild.id}`, ayar["uye"])     
+       }
+       if (ayar["sesli"]) {
+          client.ayar.set(`sesliN_${guild.id}`, ayar["sesli"])     
+       }
+       if (ayar["rekor"]) {
+          client.ayar.set(`rekoronlineN_${guild.id}`, ayar["rekor"])     
+       }
+       if (ayar["neblm"]) {
+          client.ayar.set(`neblmkanalN_${guild.id}`, ayar["neblm"])     
+       }
+       
+       if (ayar["cevrim"]) {
+          client.ayar.set(`kulkanalN_${guild.id}`, ayar["cevrim"])     
+       }
+       
+       res.redirect("/yonet?sunucu="+req.query.sunucu);
      }
     res.redirect("/yonet?sunucu="+req.query.sunucu);
   });
