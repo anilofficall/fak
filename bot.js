@@ -173,4 +173,4 @@ client.channels.get(db.fetch(`sesliK_${guild.id}`)).setName(`Sesli • ${count}`
 });
 
 
-client.login("NjUyODkyODc4OTM4NDM5Njkx.XfEbnA.4BrKzHSvKti1Uits2Vy5qt2Kmdo"); 
+client.login("NjYxMjQ5NDUzNDE1NzI3MTE0.Xhd6-w.4cEd5LwHKzleXLnFgozbGTgSJfM"); 

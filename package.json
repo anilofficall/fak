@@ -19,7 +19,9 @@
     "moment": "^2.24.0",
     "moment-duration-format": "^2.3.2",
     "quick.db": "^7.0.0-b15",
-    "weather-js": "^2.0.0"
+    "weather-js": "^2.0.0",
+    "passport": "^0.4.1",
+    "level-session-store": "^2.2.0"
   },
   "engines": {
     "node": "8.x"

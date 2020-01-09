@@ -5,8 +5,10 @@ dependencies:
   event-target: 1.2.3
   express: 4.17.1
   express-session: 1.16.2
+  level-session-store: 2.2.0
   moment: 2.24.0
   moment-duration-format: 2.3.2
+  passport: 0.4.1
   quick.db: 7.0.0-b22
   weather-js: 2.0.0
 packages:
@@ -601,6 +603,14 @@ packages:
       '0': node >=0.6.0
     resolution:
       integrity: sha1-MT5mvB5cwG5Di8G3SZwuXFastqI=
+  /level-session-store/2.2.0:
+    dependencies:
+      json-stringify-safe: 5.0.1
+    dev: false
+    peerDependencies:
+      level: '*'
+    resolution:
+      integrity: sha512-zxuvmVK0TjuXf5oHMEUzz0SGUb1rAlG89mj/pNMbIaMIqOrAvlvo1/6hkoN3squ3G/Fv0ORe78tWt0kMx8Nz/Q==
   /lodash.get/4.4.2:
     dev: false
     resolution:
@@ -754,10 +764,29 @@ packages:
       node: '>= 0.8'
     resolution:
       integrity: sha512-CiyeOxFT/JZyN5m0z9PfXw4SCBJ6Sygz1Dpl0wqjlhDEGGBP1GnsUVEL0p63hoG1fcj3fHynXi9NYO4nWOL+qQ==
+  /passport-strategy/1.0.0:
+    dev: false
+    engines:
+      node: '>= 0.4.0'
+    resolution:
+      integrity: sha1-tVOaqPwiWj0a0XlHbd8ja0QPUuQ=
+  /passport/0.4.1:
+    dependencies:
+      passport-strategy: 1.0.0
+      pause: 0.0.1
+    dev: false
+    engines:
+      node: '>= 0.4.0'
+    resolution:
+      integrity: sha512-IxXgZZs8d7uFSt3eqNjM9NQ3g3uQCW5avD8mRNoXV99Yig50vjuaez6dQK2qC0kVWPRTujxY0dWgGfT09adjYg==
   /path-to-regexp/0.1.7:
     dev: false
     resolution:
       integrity: sha1-32BBeABfUi8V60SQ5yR6G/qmf4w=
+  /pause/0.0.1:
+    dev: false
+    resolution:
+      integrity: sha1-HUCLP9t2kjuVQ9lvtMnf1TXZy10=
   /performance-now/2.1.0:
     dev: false
     resolution:
@@ -1114,7 +1143,9 @@ specifiers:
   event-target: ^1.2.3
   express: ^4.17.1
   express-session: ^1.16.1
+  level-session-store: ^2.2.0
   moment: ^2.24.0
   moment-duration-format: ^2.3.2
+  passport: ^0.4.1
   quick.db: ^7.0.0-b15
   weather-js: ^2.0.0
