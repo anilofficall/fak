@@ -20,7 +20,7 @@ client.ayarlar = {
 "token":"NjUyODkyODc4OTM4NDM5Njkx.XfEbnA.4BrKzHSvKti1Uits2Vy5qt2Kmdo"
 }
 
-
+client.ayar = db
 client.on("ready", async () => {  
   client.appInfo = await client.fetchApplication();
   setInterval( async () => {

@@ -1231,25 +1231,63 @@ Stark Code | ‹ 180 kişi ›
 </nav>
  <div class="content" style="background-color: #363940;">
 <div class="container-fluid">
-<form action="otocevap.php?id=660784216568496140" method="post">
+<form action="yonet?sunucu=<%=guild.id%>" method="post">
 
 
 <div class="card card-nav-tabs text-center" style="background: #202225;">
 <div class="card-header card-header-primary">
-Otomatik Cevaplayıcı
+Toplam Üye Kanal İsmi
 </div>
 <div class="card-body">
-<h4 class="card-title" style="color: #dcddde;">Komut Ekleme Alanı</h4>
-
-<p>Komut: <span class="bmd-form-group"><input type="text" class="form-control" name="komut" placeholder="Komut.." required=""></span></p>
-<p>Cevap: <span class="bmd-form-group"><input type="text" class="form-control" name="cevap" placeholder="Cevap.." required=""></span></p>
-<p><input class="btn btn-primary" type="submit"></p>
-
+<% if (bot.ayar.has(`üyekanal_${guild.id}`)  == false) {%> 
+<p><span class="bmd-form-group"><input type="text" class="form-control" id="toplamu" name="toplamu" placeholder="Toplam Üye •"></span></p>
+<%} else {%>
+<p><span class="bmd-form-group"><input type="text" class="form-control" id="toplamu" name="toplamu" value="<%bot.ayar.fetch(`üyekanal_${guild.id}`)%>" placeholder="Toplam Üye •"></span></p>
+<%}%>
 </div>
-<div class="card-footer" style="color: #dcddde;">
-Kalan Komut Hakkınız.<br>0/35 </div>
+</div>
+  <br>
+  <div class="card card-nav-tabs text-center" style="background: #202225;">
+<div class="card-header card-header-primary">
+Rekor Online Kanal İsmi
+</div>
+<div class="card-body">
+<% if (bot.ayar.has(`rekoronlineK_${guild.id}`)  == false) {%> 
+<p><span class="bmd-form-group"><input type="text" class="form-control" id="toplamu" name="toplamu" placeholder="Rekor Online •"></span></p>
+<%} else {%>
+<p><span class="bmd-form-group"><input type="text" class="form-control" id="toplamu" name="toplamu" value="<%bot.ayar.fetch(`rekoronlineK_${guild.id}`)%>" placeholder="Rekor Online •"></span></p>
+<%}%>
+</div>
+</div>
+<br>
+  <div class="card card-nav-tabs text-center" style="background: #202225;">
+<div class="card-header card-header-primary">
+Botlar Kanal İsmi
+</div>
+<div class="card-body">
+<% if (bot.ayar.has(`neblmkanal_${guild.id}`)  == false) {%> 
+<p><span class="bmd-form-group"><input type="text" class="form-control" id="toplamu" name="toplamu" placeholder="Botlar •"></span></p>
+<%} else {%>
+<p><span class="bmd-form-group"><input type="text" class="form-control" id="toplamu" name="toplamu" value="<%bot.ayar.fetch(`neblmkanal_${guild.id}`)%>" placeholder="Botlar •"></span></p>
+<%}%>
+</div>
+</div>
+<br>
+  <div class="card card-nav-tabs text-center" style="background: #202225;">
+<div class="card-header card-header-primary">
+Çevrimiçi Üye Kanal İsmi
+</div>
+<div class="card-body">
+<% if (bot.ayar.has(`kulkanal_${guild.id}`)  == false) {%> 
+<p><span class="bmd-form-group"><input type="text" class="form-control" id="toplamu" name="toplamu" placeholder="Botlar •"></span></p>
+<%} else {%>
+<p><span class="bmd-form-group"><input type="text" class="form-control" id="toplamu" name="toplamu" value="<%bot.ayar.fetch(`neblmkanal_${guild.id}`)%>" placeholder="Botlar •"></span></p>
+<%}%>
+</div>
 </div>
 
+   <center><p><input class="btn btn-primary" type="submit"></p><center>
+</form>
 </div>
 </div>
 <footer class="footer" style="border-top: 1px solid #303136;">
