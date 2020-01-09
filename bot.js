@@ -28,7 +28,6 @@ client.on("ready", async () => {
   }, 60000);
    require("./index.js")(client); 
    console.log("Konrol paneli aktif edildi!")
-  console.log("Shard aktif ediliyor!")
 })
 
 
@@ -144,15 +143,15 @@ if (guild.id !== serverStats.guildID) return;
 if (!guild.channels.get(totalm)) return console.log("Hata kanal ismi değişmiyor amk")
 let aktif = guild.members.filter(m => m.presence.status !== "offline").size
 let rekoronline = db.fetch(`rekoronlineS_${guild.id}`);
-client.channels.get(serverStats.totalUsersID).setName(`Toplam Üye • ${guild.memberCount} `);
-client.channels.get(db.fetch(`rekoronlineK_${guild.id}`)).setName(`Rekor Online • ${db.fetch(`rekoronlineS_${guild.id}`)}`);
-client.channels.get(serverStats.memberCountID).setName(`Çevrimiçi Üye • ${guild.members.filter(m => m.presence.status !== "offline").size}`);
-client.channels.get(serverStats.botCountID).setName(`Botlar • ${guild.members.filter(m => m.user.bot).size}`);
-client.channels.get(db.fetch(`sesliK_${guild.id}`)).setName(`Sesli • ${count}`);
+client.channels.get(serverStats.totalUsersID).setName(`${client.ayar.fetch(`üyekanalN_${guild.id}`) || "Toplam Üye •"} ${guild.memberCount} `);
+client.channels.get(db.fetch(`rekoronlineK_${guild.id}`)).setName(`${client.ayar.fetch(`rekoronlineN_${guild.id}`) || "Rekor Online •"} ${db.fetch(`rekoronlineS_${guild.id}`)}`);
+client.channels.get(serverStats.memberCountID).setName(`${client.ayar.fetch(`kulkanalN_${guild.id}`) || "Çevrimiçi Üye •"} ${guild.members.filter(m => m.presence.status !== "offline").size}`);
+client.channels.get(serverStats.botCountID).setName(`${client.ayar.fetch(`neblmkanalN_${guild.id}`) || "Botlar •"} ${guild.members.filter(m => m.user.bot).size}`);
+client.channels.get(db.fetch(`sesliK_${guild.id}`)).setName(`${client.ayar.fetch(`sesliN_${guild.id}`) || "Sesli •"} ${count}`);
 
     if(aktif > rekoronline) {
     db.set(`rekoronlineS_${guild.id}`, aktif)
-   client.channels.get(serverStats.onlineUsers).setName(`Rekor Online  ${guild.members.filter(m => m.presence.status !== "offline").size}`)
+   client.channels.get(serverStats.onlineUsers).setName(`${client.ayar.fetch(`rekoronlineN_${guild.id}`) || "Rekor Online •"} ${guild.members.filter(m => m.presence.status !== "offline").size}`)
   }
   } else {
     return;

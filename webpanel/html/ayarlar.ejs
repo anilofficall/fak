@@ -1243,7 +1243,7 @@ Toplam Üye Kanal İsmi
 <% if (bot.ayar.has(`üyekanalN_${guild.id}`)  == false) {%> 
 <p><span class="bmd-form-group"><input type="text" class="form-control" id="uye" name="uye" placeholder="Toplam Üye •"></span></p>
 <%} else {%>
-<p><span class="bmd-form-group"><input type="text" class="form-control" id="uye" name="uye" value="<%bot.ayar.fetch(`üyekanalN_${guild.id}`)%>" placeholder="Toplam Üye •"></span></p>
+<p><span class="bmd-form-group"><input type="text" class="form-control" id="uye" name="uye" value="<%=bot.ayar.fetch(`üyekanalN_${guild.id}`)%>" placeholder="Toplam Üye •"></span></p>
 <%}%>
 </div>
 </div>
@@ -1257,7 +1257,7 @@ Rekor Online Kanal İsmi
 <% if (bot.ayar.has(`rekoronlineN_${guild.id}`)  == false) {%> 
 <p><span class="bmd-form-group"><input type="text" class="form-control" id="rekor" name="rekor" placeholder="Rekor Online •"></span></p>
 <%} else {%>
-<p><span class="bmd-form-group"><input type="text" class="form-control" id="rekor" name="rekor" value="<%bot.ayar.fetch(`rekoronlineN_${guild.id}`)%>" placeholder="Rekor Online •"></span></p>
+<p><span class="bmd-form-group"><input type="text" class="form-control" id="rekor" name="rekor" value="<%=bot.ayar.fetch(`rekoronlineN_${guild.id}`)%>" placeholder="Rekor Online •"></span></p>
 <%}%>
 </div>
 </div>
@@ -1270,7 +1270,7 @@ Botlar Kanal İsmi
 <% if (bot.ayar.has(`neblmkanalN_${guild.id}`)  == false) {%> 
 <p><span class="bmd-form-group"><input type="text" class="form-control" id="neblm" name="neblm" placeholder="Botlar •"></span></p>
 <%} else {%>
-<p><span class="bmd-form-group"><input type="text" class="form-control" id="neblm" name="neblm" value="<%bot.ayar.fetch(`neblmkanalN_${guild.id}`)%>" placeholder="Botlar •"></span></p>
+<p><span class="bmd-form-group"><input type="text" class="form-control" id="neblm" name="neblm" value="<%=bot.ayar.fetch(`neblmkanalN_${guild.id}`)%>" placeholder="Botlar •"></span></p>
 <%}%>
 </div>
 </div>
@@ -1283,7 +1283,7 @@ Botlar Kanal İsmi
 <% if (bot.ayar.has(`kulkanalN_${guild.id}`)  == false) {%> 
 <p><span class="bmd-form-group"><input type="text" class="form-control" id="cevrim" name="cevrim" placeholder="Çevrimiçi Üye •"></span></p>
 <%} else {%>
-<p><span class="bmd-form-group"><input type="text" class="form-control" id="cevrim" name="cevrim" value="<%bot.ayar.fetch(`kulkanalN_${guild.id}`)%>" placeholder="Çevrimiçi Üye •"></span></p>
+<p><span class="bmd-form-group"><input type="text" class="form-control" id="cevrim" name="cevrim" value="<%=bot.ayar.fetch(`kulkanalN_${guild.id}`)%>" placeholder="Çevrimiçi Üye •"></span></p>
 <%}%>
 </div>
 </div>
@@ -1297,7 +1297,7 @@ Sesli Kanal İsmi
 <% if (bot.ayar.has(`sesliN_${guild.id}`)  == false) {%> 
 <p><span class="bmd-form-group"><input type="text" class="form-control" id="sesli" name="sesli" placeholder="Sesli •"></span></p>
 <%} else {%>
-<p><span class="bmd-form-group"><input type="text" class="form-control" id="sesli" name="sesli" value="<%bot.ayar.fetch(`sesliN_${guild.id}`)%>" placeholder="Sesli •"></span></p>
+<p><span class="bmd-form-group"><input type="text" class="form-control" id="sesli" name="sesli" value="<%=bot.ayar.fetch(`sesliN_${guild.id}`)%>" placeholder="Sesli •"></span></p>
 <%}%>
 </div>
 </div>

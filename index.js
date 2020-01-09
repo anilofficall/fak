@@ -278,7 +278,6 @@ const guild = client.guilds.get(req.query.sunucu);
        
        res.redirect("/yonet?sunucu="+req.query.sunucu);
      }
-    res.redirect("/yonet?sunucu="+req.query.sunucu);
   });
   
 
