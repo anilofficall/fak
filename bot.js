@@ -28,6 +28,17 @@ client.ayarlar = {
 }
 
 
+client.on("ready", async () => {  
+  client.appInfo = await client.fetchApplication();
+  setInterval( async () => {
+    client.appInfo = await client.fetchApplication();
+  }, 60000);
+   require("./index.js")(client); 
+   console.log("Konrol paneli aktif edildi!")
+  console.log("Shard aktif ediliyor!")
+})
+
+
 const kurulum = message => {
   console.log(`${message} yüklendi.`);
 };
