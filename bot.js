@@ -15,6 +15,7 @@ client.ayarlar = {
 "durum":"dnd",//online , idle , dnd 
 "oynuyor":"st!yardım | ST-AT",
 "prefix":"r!",
+"client"
 "renk": "36393F",
 "token":"NjUyODkyODc4OTM4NDM5Njkx.XfEbnA.4BrKzHSvKti1Uits2Vy5qt2Kmdo"
 }
