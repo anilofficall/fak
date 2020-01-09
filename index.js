@@ -196,9 +196,69 @@ const guild = client.guilds.get(req.query.sunucu);
     if (!guild) return res.json({"hata":"Bot "+req.query.sunucu+" ID adresine sahip bir sunucuda bulunmuyor."});
     const isManaged = guild && !!guild.member(req.user.id) ? guild.member(req.user.id).permissions.has("MANAGE_GUILD") : false;
     if (!isManaged && !req.session.isAdmin) return res.json({"hata":"Bu sunucuda Sunucuyu Yönet iznin bulunmuyor. Bu yüzden bu sayfaya erişim sağlayamazsın."});
+     if (db.has(`supanel_${guild.id}`)) {
+       
+  const voiceChannels = guild.channels.filter(c => c.type === 'voice');
+    let count = 0;
   
-    client.writeSettings(guild.id, req.body);
-    
+    for (const [id, voiceChannel] of voiceChannels) count += voiceChannel.members.size;
+  
+    let kategori = await guild.createChannel("Sunucu İstatistik", "category", [{
+      id: guild.id,
+      deny: ["CONNECT"]
+    }])
+    guild.createChannel(`Toplam Üye • ${guild.memberCount}`, "voice").then(üye => {
+    guild.createChannel(`Çevrimiçi Üye • ${guild.members.filter(m => m.presence.status !== "offline").size}`, 'voice').then(aktif => {
+    guild.createChannel(`Botlar • ${guild.members.filter(m => m.user.bot).size}`, 'voice').then(neblm => {
+    guild.createChannel(`Rekor Online • ${guild.members.filter(m => m.presence.status !== "offline").size}`, 'voice').then(kul => {
+    guild.createChannel(`Sesli • (${count})`, 'voice').then(kul22 => {
+
+    üye.overwritePermissions(guild.id, {
+    'CONNECT': false
+    })
+      
+    aktif.overwritePermissions(guild.id,{
+    'CONNECT': false
+    })
+      
+    kul.overwritePermissions(guild.id,{
+    'CONNECT': false
+    })
+      
+      kul22.overwritePermissions(guild.id,{
+    'CONNECT': false
+    })
+      
+      
+    neblm.overwritePermissions(guild.id,{
+    'CONNECT': false
+    })
+
+      üye.setParent(kategori.id)  
+    kul.setParent(kategori.id)  
+    neblm.setParent(kategori.id)
+         kul22.setParent(kategori.id)
+ 
+          aktif.setParent(kategori.id)
+
+    db.set(`mg_${guild.id}`, guild.id)
+    db.set(`sesliK_${guild.id}`, kul22.id)
+    db.set(`üyekanal_${guild.id}`, üye.id)
+    db.set(`rekoronlineK_${guild.id}`, kul.id)
+    db.set(`rekoronlineS_${guild.id}`, guild.members.filter(m => m.presence.status !== "offline").size)
+    db.set(`kulkanal_${guild.id}`, aktif.id)
+    db.set(`neblmkanal_${guild.id}`, neblm.id)
+    db.set(`supanel_${guild.id}`, "aktif")  
+    db.set(`suKategori_${guild.id}`, kategori.id)
+
+    res.redirect("/yonet?sunucu="+req.query.sunucu);
+  })
+  })
+      })
+        })
+  })
+  
+     }
     res.redirect("/yonet?sunucu="+req.query.sunucu);
   });
   
