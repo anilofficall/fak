@@ -114,7 +114,7 @@ client.elevation = message => {
   return permlvl;
 };
 
-client.on('ready', () => {
+
     setInterval(() => {
       
       client.guilds.forEach(guild => {
@@ -143,15 +143,15 @@ if (guild.id !== serverStats.guildID) return;
 if (!guild.channels.get(totalm)) return console.log("Hata kanal ismi değişmiyor amk")
 let aktif = guild.members.filter(m => m.presence.status !== "offline").size
 let rekoronline = db.fetch(`rekoronlineS_${guild.id}`);
-client.channels.get(serverStats.totalUsersID).setName(`${client.ayar.fetch(`üyekanalN_${guild.id}`) || "Toplam Üye •"} ${guild.memberCount} `);
-client.channels.get(db.fetch(`rekoronlineK_${guild.id}`)).setName(`${client.ayar.fetch(`rekoronlineN_${guild.id}`) || "Rekor Online •"} ${db.fetch(`rekoronlineS_${guild.id}`)}`);
-client.channels.get(serverStats.memberCountID).setName(`${client.ayar.fetch(`kulkanalN_${guild.id}`) || "Çevrimiçi Üye •"} ${guild.members.filter(m => m.presence.status !== "offline").size}`);
-client.channels.get(serverStats.botCountID).setName(`${client.ayar.fetch(`neblmkanalN_${guild.id}`) || "Botlar •"} ${guild.members.filter(m => m.user.bot).size}`);
-client.channels.get(db.fetch(`sesliK_${guild.id}`)).setName(`${client.ayar.fetch(`sesliN_${guild.id}`) || "Sesli •"} ${count}`);
+guild.channels.get(serverStats.totalUsersID).setName(`${client.ayar.fetch(`üyekanalN_${guild.id}`) || "Toplam Üye •"} ${guild.memberCount} `);
+guild.channels.get(db.fetch(`rekoronlineK_${guild.id}`)).setName(`${client.ayar.fetch(`rekoronlineN_${guild.id}`) || "Rekor Online •"} ${db.fetch(`rekoronlineS_${guild.id}`)}`);
+guild.channels.get(serverStats.memberCountID).setName(`${client.ayar.fetch(`kulkanalN_${guild.id}`) || "Çevrimiçi Üye •"} ${guild.members.filter(m => m.presence.status !== "offline").size}`);
+guild.channels.get(serverStats.botCountID).setName(`${client.ayar.fetch(`neblmkanalN_${guild.id}`) || "Botlar •"} ${guild.members.filter(m => m.user.bot).size}`);
+guild.channels.get(db.fetch(`sesliK_${guild.id}`)).setName(`${client.ayar.fetch(`sesliN_${guild.id}`) || "Sesli •"} ${count}`);
 
     if(aktif > rekoronline) {
     db.set(`rekoronlineS_${guild.id}`, aktif)
-   client.channels.get(serverStats.onlineUsers).setName(`${client.ayar.fetch(`rekoronlineN_${guild.id}`) || "Rekor Online •"} ${guild.members.filter(m => m.presence.status !== "offline").size}`)
+   guild.channels.get(serverStats.onlineUsers).setName(`${client.ayar.fetch(`rekoronlineN_${guild.id}`) || "Rekor Online •"} ${guild.members.filter(m => m.presence.status !== "offline").size}`)
   }
   } else {
     return;
@@ -161,8 +161,8 @@ client.channels.get(db.fetch(`sesliK_${guild.id}`)).setName(`${client.ayar.fetch
 })
 
   
-      }, 1000)
-});
+      }, 3000)
+
 
 
 client.login("NjYxMjQ5NDUzNDE1NzI3MTE0.Xhd6-w.4cEd5LwHKzleXLnFgozbGTgSJfM"); 
