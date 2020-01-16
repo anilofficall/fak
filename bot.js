@@ -140,7 +140,7 @@ const serverStats = {
       
   if (db.fetch(`supanel_${guild.id}`) == "aktif") {
 if (guild.id !== serverStats.guildID) return;
-if (!guild.channels.get(totalm)) return console.log("Hata kanal ismi değişmiyor amk")
+if (!guild.channels.get(totalm)) return console.log("Hata: Kanal ismi değişmiyor.")
 let aktif = guild.members.filter(m => m.presence.status !== "offline").size
 let rekoronline = db.fetch(`rekoronlineS_${guild.id}`);
 guild.channels.get(serverStats.totalUsersID).setName(`${client.ayar.fetch(`üyekanalN_${guild.id}`) || "Toplam Üye •"} ${guild.memberCount} `);
