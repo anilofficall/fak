@@ -12,12 +12,12 @@ require('./util/eventLoader')(client);
 
 
 client.ayarlar = {
-"durum":"dnd",//online , idle , dnd 
-"oynuyor":"st!yardım | ST-AT",
-"prefix":"r!",
-"sahip": ["653664813746225167"],
+"durum":"online",//online , idle , dnd 
+"oynuyor":"sb!yardım | Stat Bot",
+"prefix":"sb!",
+"sahip": ["619852769955807255"],
 "renk": "36393F",
-"token":"NjUyODkyODc4OTM4NDM5Njkx.XfEbnA.4BrKzHSvKti1Uits2Vy5qt2Kmdo"
+"token":"NjY3NDY5MDQzNzk1NDkyOTA1.XiDL7g.10vsCg_ckmvlnsIH_njxFnkZjvk"
 }
 
 client.ayar = db
@@ -165,4 +165,4 @@ guild.channels.get(db.fetch(`sesliK_${guild.id}`)).setName(`${client.ayar.fetch(
 
 
 
-client.login("NjYxMjQ5NDUzNDE1NzI3MTE0.Xhd6-w.4cEd5LwHKzleXLnFgozbGTgSJfM"); 
+client.login("NjY3NDY5MDQzNzk1NDkyOTA1.XiDL7g.10vsCg_ckmvlnsIH_njxFnkZjvk"); 

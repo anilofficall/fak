@@ -3,16 +3,14 @@ const db = require('quick.db');
 
 exports.run = async(client, message, args) => {
     const Embed = new Discord.RichEmbed()
-    .setAuthor("ST-AT", "https://images-ext-2.discordapp.net/external/LV8Xh_A9-msM9VaMHsERcGsjATp-hwvNmIWaKasllLw/%3Fsize%3D2048/https/cdn.discordapp.com/avatars/527858318786691092/eed7a35b569ee4e449a9fce5f37f5300.png")
+    .setAuthor("Stat Bot", client.user.avatarURL)
+    .setTitle("Stat Bot")
     .setColor("BLUE")
-    .setTitle("ST-AT BOT")
-    .setURL("https://stat31.com")
     .setDescription("Sunucu İstatistiklerini Sunan Bir Botdur.")
-    .addField("st!kurulum / st!statskapat", "Stats Odası Açıp Kapatmak İçin Bu 2 Komut Yeterlidir.")
-    .addField("st!botbilgi", "ST-AT Bot Hakkında Bilgi Alırsınız!")
-    .addField("st!davet", "ST-AT Botunu Davet Edebilirsiniz!")
+    .addField("sb!kurulum / st!statskapat", "Stats Odası Açıp Kapatmak İçin Bu 2 Komut Yeterlidir.")
+    .addField("st!botbilgi", "Stat Bot Hakkında Bilgi Alırsınız!")
     .setTimestamp()
-    .setFooter("© Mcadventuretime.com", "https://images-ext-2.discordapp.net/external/LV8Xh_A9-msM9VaMHsERcGsjATp-hwvNmIWaKasllLw/%3Fsize%3D2048/https/cdn.discordapp.com/avatars/527858318786691092/eed7a35b569ee4e449a9fce5f37f5300.png")
+    .setFooter("© Stat Bots", client.user.avatarURL)
     message.channel.send(Embed)
     };
 
