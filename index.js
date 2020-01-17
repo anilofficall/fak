@@ -240,7 +240,7 @@ const guild = client.guilds.get(req.query.sunucu);
  
           aktif.setParent(kategori.id)
 
-    db.set(`mg_${guild.id}`, guild.id)
+    
     db.set(`sesliK_${guild.id}`, kul22.id)
     db.set(`üyekanal_${guild.id}`, üye.id)
     db.set(`rekoronlineK_${guild.id}`, kul.id)
