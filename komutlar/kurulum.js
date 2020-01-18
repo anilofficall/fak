@@ -15,10 +15,15 @@ exports.run = async(client, message, args) => {
       deny: ["CONNECT"]
     }])
     message.guild.createChannel(`Toplam Üye • ${message.guild.memberCount}`, "voice").then(üye => {
+    message.channel.send("Oda **1** aktif.")
     message.guild.createChannel(`Çevrimiçi Üye • ${message.guild.members.filter(m => m.presence.status !== "offline").size}`, 'voice').then(aktif => {
+    message.channel.send("Oda **2** aktif.")
     message.guild.createChannel(`Botlar • ${message.guild.members.filter(m => m.user.bot).size}`, 'voice').then(neblm => {
+    message.channel.send("Oda **3** aktif.")
     message.guild.createChannel(`Rekor Online • ${message.guild.members.filter(m => m.presence.status !== "offline").size}`, 'voice').then(kul => {
+    message.channel.send("Oda **4** aktif.")
     message.guild.createChannel(`Sesli • (${count})`, 'voice').then(kul22 => {
+    message.channel.send("Oda **5** aktif.")
 
     üye.overwritePermissions(message.guild.id, {
     'CONNECT': false
