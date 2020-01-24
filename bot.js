@@ -120,7 +120,7 @@ client.elevation = message => {
       client.guilds.forEach(guild => {
  
     
-      const totalm = db.fetch(`üyekanal_${guild.id}`);
+const totalm = db.fetch(`üyekanal_${guild.id}`);
 const memberss = db.fetch(`kulkanal_${guild.id}`);
 const botscont = db.fetch(`neblmkanal_${guild.id}`);
 // GEREKLİ YERLER
