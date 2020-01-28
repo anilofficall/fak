@@ -5,11 +5,11 @@ exports.run = (client, message, args) => {
  var user = message.mentions.users.first() || message.author; 
   const duration = client.uptime
 const embed = new Discord.RichEmbed()
-.setAuthor("Stat Bot", client.user.avatarURL)
-.setTitle("Stat Bot")
+.setAuthor("DarkCodeS-Panel", client.user.avatarURL)
+.setTitle("DarkCodeS-Panel")
 .setColor("BLUE")
 .setTimestamp()
-.setFooter("© Stat Bots", client.user.avatarURL)
+.setFooter("© DarkCodeS-Panel", client.user.avatarURL)
 .addField("Kullanılan RAM", `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)} MB`)
 .addField("Bilgi", `
 ${client.guilds.size.toLocaleString()}, Sunucu!. / ${client.users.size}, Üye! / Shard ID: **Yok!**
