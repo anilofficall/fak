@@ -17,7 +17,7 @@ client.ayarlar = {
 "prefix":"dcp!",
 "sahip": "449619212177113109",
 "renk": "36393F",
-"token":"NjcxNjc4MDQwNzg2MzM3ODAy.XjAd5g.DXQiKUd_3F3OICLZ5DHMgdtY2BU"
+"token":"NjcxNjc4MDQwNzg2MzM3ODAy.XjCG9g.W331QKgR3p6ngfpszcB7vWEtftM"
 }
 
 client.ayar = db
@@ -165,4 +165,4 @@ guild.channels.get(db.fetch(`sesliK_${guild.id}`)).setName(`${client.ayar.fetch(
 
 
 
-client.login("NjcxNjc4MDQwNzg2MzM3ODAy.XjAd5g.DXQiKUd_3F3OICLZ5DHMgdtY2BU"); 
+client.login("NjcxNjc4MDQwNzg2MzM3ODAy.XjCG9g.W331QKgR3p6ngfpszcB7vWEtftM"); 
