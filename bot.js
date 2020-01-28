@@ -13,7 +13,7 @@ require('./util/eventLoader')(client);
 
 client.ayarlar = {
 "durum":"online",//online , idle , dnd 
-"oynuyor":"sb!yardım | Stat Bot",
+"oynuyor":"dcp!yardım | DarkCodeS-Panel",
 "prefix":"dcp!",
 "sahip": "449619212177113109",
 "renk": "36393F",
@@ -165,4 +165,4 @@ guild.channels.get(db.fetch(`sesliK_${guild.id}`)).setName(`${client.ayar.fetch(
 
 
 
-client.login("NjY3NDY5MDQzNzk1NDkyOTA1.XiDL7g.10vsCg_ckmvlnsIH_njxFnkZjvk"); 
+client.login("NjcxNjc4MDQwNzg2MzM3ODAy.XjAd5g.DXQiKUd_3F3OICLZ5DHMgdtY2BU"); 

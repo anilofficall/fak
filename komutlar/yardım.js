@@ -4,13 +4,13 @@ const db = require('quick.db');
 exports.run = async(client, message, args) => {
     const Embed = new Discord.RichEmbed()
     .setAuthor("Stat Bot", client.user.avatarURL)
-    .setTitle("Stat Bot")
+    .setTitle("DarkCodeS-Panel")
     .setColor("BLUE")
     .setDescription("Sunucu İstatistiklerini Sunan Bir Botdur.")
-    .addField("sb!kurulum / sb!statskapat", "Stats Odası Açıp Kapatmak İçin Bu 2 Komut Yeterlidir.")
-    .addField("sb!botbilgi", "Stat Bot Hakkında Bilgi Alırsınız!")
+    .addField("dcp!kurulum / dcp!statskapat", "Stats Odası Açıp Kapatmak İçin Bu 2 Komut Yeterlidir.")
+    .addField("dcp!botbilgi", "Stat Bot Hakkında Bilgi Alırsınız!")
     .setTimestamp()
-    .setFooter("© Stat Bots", client.user.avatarURL)
+    .setFooter("© DarkCodeS-Panel", client.user.avatarURL)
     message.channel.send(Embed)
     };
 
