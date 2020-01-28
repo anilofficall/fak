@@ -15,9 +15,9 @@ client.ayarlar = {
 "durum":"online",//online , idle , dnd 
 "oynuyor":"sb!yardım | Stat Bot",
 "prefix":"sb!",
-"sahip": ["619852769955807255"],
+"sahip": ["449619212177113109"],
 "renk": "36393F",
-"token":"NjY3NDY5MDQzNzk1NDkyOTA1.XiDL7g.10vsCg_ckmvlnsIH_njxFnkZjvk"
+"token":"NjcxNjc4MDQwNzg2MzM3ODAy.XjAbnQ.o3ev_c-sbk_VuSaoMvOVnscOy0w"
 }
 
 client.ayar = db

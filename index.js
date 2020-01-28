@@ -19,9 +19,9 @@ const db = require('quick.db');
 module.exports = (client) => {
   
   const bilgiler = {
-    oauthSecret: "jPZCjeahsYQlu2Dxzz-do_fLfm6ZIE9j",
-    callbackURL: `https://statbots.glitch.me/callback`,
-    domain: `https://statbots.glitch.me/`
+    oauthSecret: "Q496IxXhQwQoSD3ENJ9qvjBcxD9_KIPb",
+    callbackURL: `https://darkcode-panel.glitch.me/callback`,
+    domain: `https://darkcode-panel.glitch.me/`
   };
   
   console.log('BAŞARILI')
