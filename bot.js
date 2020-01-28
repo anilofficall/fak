@@ -14,10 +14,10 @@ require('./util/eventLoader')(client);
 client.ayarlar = {
 "durum":"online",//online , idle , dnd 
 "oynuyor":"sb!yardım | Stat Bot",
-"prefix":"sb!",
-"sahip": ["449619212177113109"],
+"prefix":"dcp!",
+"sahip": "449619212177113109",
 "renk": "36393F",
-"token":"NjcxNjc4MDQwNzg2MzM3ODAy.XjAbnQ.o3ev_c-sbk_VuSaoMvOVnscOy0w"
+"token":"NjcxNjc4MDQwNzg2MzM3ODAy.XjAd5g.DXQiKUd_3F3OICLZ5DHMgdtY2BU"
 }
 
 client.ayar = db
