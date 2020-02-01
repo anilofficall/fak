@@ -22,7 +22,7 @@ exports.conf = {
 };
 
 exports.help = {
-  name: 'yardım', 
+  name: 'yardıms', 
   description: 'nblm', 
   usage: 'stat' 
 };

@@ -13,8 +13,7 @@ require('./util/eventLoader')(client);
 
 client.ayarlar = {
 "durum":"online",//online , idle , dnd 
-"oynuyor":"dcp!yardım | DarkCodeS-Panel",
-"prefix":"dcp!",
+"prefix":"!",
 "sahip": "449619212177113109",
 "renk": "36393F",
 "token":"NjcxNjc4MDQwNzg2MzM3ODAy.XjCG9g.W331QKgR3p6ngfpszcB7vWEtftM"
