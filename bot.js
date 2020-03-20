@@ -164,4 +164,4 @@ guild.channels.get(db.fetch(`sesliK_${guild.id}`)).setName(`${client.ayar.fetch(
 
 
 
-client.login("Njg4NzQwMTExMzg2ODA0MjQ0.XnTT2A.hMoTlAxiKgsd5EGkYDTxs5tVWQI"); 
+client.login(""); 
