@@ -3,14 +3,13 @@ const db = require('quick.db');
 
 exports.run = async(client, message, args) => {
     const Embed = new Discord.RichEmbed()
-    .setAuthor("DarkCodeS-Panel", client.user.avatarURL)
-    .setTitle("DarkCodeS-Panel")
-    .setColor("BLUE")
+    .setAuthor("Protect Of Server", client.user.avatarURL)
+    .setTitle("Protect Of Server")
+    .setColor("ORANGE")
     .setDescription("Sunucu İstatistiklerini Sunan Bir Botdur.")
-    .addField("dcp!kurulum / dcp!statskapat", "Stats Odası Açıp Kapatmak İçin Bu 2 Komut Yeterlidir.")
-    .addField("dcp!botbilgi", "DarkCodeS-Panel Hakkında Bilgi Alırsınız!")
+    .addField("-kurulum / -statskapat", "Stats Odası Açıp Kapatmak İçin Bu 2 Komut Yeterlidir.")
     .setTimestamp()
-    .setFooter("© DarkCodeS-Panel", client.user.avatarURL)
+    .setFooter("© Protect Of Server", client.user.avatarURL)
     message.channel.send(Embed)
     };
 
@@ -22,7 +21,7 @@ exports.conf = {
 };
 
 exports.help = {
-  name: 'yardıms', 
+  name: 'panel', 
   description: 'nblm', 
   usage: 'stat' 
 };
