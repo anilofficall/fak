@@ -9,6 +9,7 @@ exports.run = async(client, message, args) => {
     .setDescription("Sunucu İstatistiklerini Sunan Bir Botdur.")
     .addField("-kurulum / -statskapat", "Stats Odası Açıp Kapatmak İçin Bu 2 Komut Yeterlidir.")
     .addField("-panel", "Odaları Panelsen Yönete Bilirsiniz!")
+    .addField("-botbilgi", "Bilgileri Listelersiniz")
     .addField("-davet", "Davet Linkimi Alabilirsin")
     .setTimestamp()
     .setFooter("© Server Stat", client.user.avatarURL)
