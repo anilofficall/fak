@@ -12,6 +12,8 @@ exports.run = async (client, message, args) => {
       "Stats Odası Açıp Kapatmak İçin Bu 2 Komut Yeterlidir."
     )
     .addField("-panel", "Odaları Panelsen Yönete Bilirsiniz!")
+  .addField("-bot-bilgi", "Bilgileri Alırsınız")
+  .addField("-prefix-ayarla", "Prefiz Değiştirilir")
     .addField("-davet", "Davet Linkimi Alabilirsin")
     .setTimestamp()
     .setFooter("© Server Stat", client.user.avatarURL);
