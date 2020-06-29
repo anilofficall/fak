@@ -5,8 +5,7 @@ const express = require('express');
 const app = express();
 const http = require('http');
 const shard = new Discord.ShardingManager('./bot.js', {
-    totalShards: ,auto,
-  
+    totalShards: 'auto',
     token: ayarlar.token
 });
 shard.spawn(); 
