@@ -15,7 +15,7 @@ client.ayarlar = {
   prefix: "-",
   sahip: "449619212177113109",
   renk: "36393F",
-  token: "NzI3MDUwOTEyNzk5MTI5NjQw.XvmOLw.g4qV-yYlbVWUK_yXgAgl_eojN6I"
+  token: "NzI3MDUwOTEyNzk5MTI5NjQw.XvnqLg.wGYi_cuPEVx2Vw7CrHdFBnMbupE"
 };
 
 client.ayar = db;
@@ -23,7 +23,7 @@ client.on("ready", async () => {
   client.appInfo = await client.fetchApplication();
   setInterval(async () => {
     client.appInfo = await client.fetchApplication();
-  }, 60000);
+  }, 10000);
   require("./index.js")(client);
   console.log("Konrol paneli aktif edildi!");
 });
@@ -185,6 +185,6 @@ setInterval(() => {
       return;
     }
   });
-}, 3000);
+}, 5000);
 
-client.login("NzI3MDUwOTEyNzk5MTI5NjQw.XvmOLw.g4qV-yYlbVWUK_yXgAgl_eojN6I");
+client.login("NzI3MDUwOTEyNzk5MTI5NjQw.XvnqLg.wGYi_cuPEVx2Vw7CrHdFBnMbupE");

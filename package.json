@@ -5,9 +5,9 @@
   "name": "Kivars",
   "version": "1.0.0",
   "description": "Juars.",
-  "main": "shard.js",
+  "main": "bot.js",
   "scripts": {
-    "start": "node shard.js"
+    "start": "node bot.js"
   },
   "dependencies": {
     "chalk": "^4.1.0",
@@ -18,7 +18,7 @@
     "express-session": "^1.17.1",
     "moment": "^2.27.0",
     "moment-duration-format": "^2.3.2",
-    "quick.db": "^7.0.0-b15",
+    "quick.db": "^7.1.1",
     "weather-js": "^2.0.0",
     "passport": "^0.4.1",
     "level-session-store": "^2.2.0",
