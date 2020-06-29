@@ -1,4 +1,4 @@
-let pingWasHere = new Set();
+let pingWasHere= new Set();
 module.exports = message => {
   if (pingWasHere.has(message.author.id)) {
     return;
@@ -21,8 +21,7 @@ module.exports = message => {
     pingEsya = client.commands.get(client.aliases.get(komut));
   }
   if (pingEsya) {
-    if (pingYetkileri < pingEsya.conf.permLevel)
-      return message.channel.send("Yetersiz yetki!");
+    if (pingYetkileri < pingEsya.conf.permLevel) return message.channel.send("Yetersiz yetki!");
     pingEsya.run(client, message, params, pingYetkileri);
   }
 };
