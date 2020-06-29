@@ -7,9 +7,7 @@ exports.run = async(client, message, args) => {
     .setTitle("Server Stat")
     .setColor("ORANGE")
     .setDescription("Sunucu İstatistiklerini Sunan Bir Botdur.")
-    .addField("-kurulum / -statskapat", "Stats Odası Açıp Kapatmak İçin Bu 2 Komut Yeterlidir.")
-    .addField("-panel", "Odaları Panelsen Yönete Bilirsiniz!")
-    .addField("-davet", "Davet Linkimi Alabilirsin")
+    .addField("Panelimiz : https://server-statbot.glitch.me/")
     .setTimestamp()
     .setFooter("© Server Stat", client.user.avatarURL)
     message.channel.send(Embed)
@@ -23,7 +21,7 @@ exports.conf = {
 };
 
 exports.help = {
-  name: 'yardım', 
+  name: 'panel', 
   description: 'nblm', 
-  usage: 'yardım' 
+  usage: 'panel' 
 };

@@ -20,8 +20,8 @@ module.exports = (client) => {
   
   const bilgiler = {
     oauthSecret: "ZhBQW264bTVJDM2Y5lq_pgWDxBJ7tA_6",
-    callbackURL: `https://darkcode-panel.glitch.me/callback`,
-    domain: `https://darkcode-panel.glitch.me/`
+    callbackURL: `https://server-statbot.glitch.me/callback`,
+    domain: `https://server-statbot.glitch.me/`
   };
   
   console.log('BAŞARILI')
