@@ -13,7 +13,6 @@ exports.run = async (client, message, args) => {
     )
     .addField("-panel", "Odaları Panelsen Yönete Bilirsiniz!")
   .addField("-bot-bilgi", "Bilgileri Alırsınız")
-  .addField("-prefix-ayarla", "Prefiz Değiştirilir")
     .addField("-davet", "Davet Linkimi Alabilirsin")
     .setTimestamp()
     .setFooter("© Server Stat", client.user.avatarURL);

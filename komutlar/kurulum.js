@@ -63,7 +63,7 @@ exports.run = async(client, message, args) => {
     db.set(`supanel_${message.guild.id}`, "aktif")  
     db.set(`suKategori_${message.guild.id}`, kategori.id)
 
-    message.channel.send("Stats Sistemi Kuruldu.")
+    message.channel.send("Stats Sistemi Kuruldu ! Odaların İsmini Değişmek İsterseniz (https://server-statbot.glitch.me/)")
   })
   })
       })
