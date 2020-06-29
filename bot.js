@@ -15,7 +15,7 @@ client.ayarlar = {
   prefix: "-",
   sahip: "449619212177113109",
   renk: "36393F",
-  token: "NzI2NzUyMDA2MjEwODQ2NzMw.XvmKKA.vou0xMy24NxlKWz-mfHP_gvDGBQ"
+  token: "NzI3MDUwOTEyNzk5MTI5NjQw.XvmOLw.g4qV-yYlbVWUK_yXgAgl_eojN6I"
 };
 
 client.ayar = db;
@@ -187,4 +187,4 @@ setInterval(() => {
   });
 }, 3000);
 
-client.login("NzI2NzUyMDA2MjEwODQ2NzMw.XvmKKA.vou0xMy24NxlKWz-mfHP_gvDGBQ");
+client.login("NzI3MDUwOTEyNzk5MTI5NjQw.XvmOLw.g4qV-yYlbVWUK_yXgAgl_eojN6I");
