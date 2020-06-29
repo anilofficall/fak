@@ -7,7 +7,7 @@ exports.run = async(client, message, args) => {
     .setTitle("Server Stat")
     .setColor("ORANGE")
     .setDescription("Sunucu İstatistiklerini Sunan Bir Botdur.")
-    .addField("Davet Linkim", "https://bit.ly/3g8ZRWE")
+    .addField("Davet Linkim", `https://bit.ly/3g8ZRWE`,true)
     .setTimestamp()
     .setFooter("© Server Stat", client.user.avatarURL)
     message.channel.send(Embed)

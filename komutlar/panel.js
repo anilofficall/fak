@@ -7,7 +7,7 @@ exports.run = async(client, message, args) => {
     .setTitle("Server Stat")
     .setColor("ORANGE")
     .setDescription("Sunucu İstatistiklerini Sunan Bir Botdur.")
-    .addField("Panelimiz : https://server-statbot.glitch.me/")
+    .addField("Panelim", `https://server-statbot.glitch.me/`,true)
     .setTimestamp()
     .setFooter("© Server Stat", client.user.avatarURL)
     message.channel.send(Embed)
