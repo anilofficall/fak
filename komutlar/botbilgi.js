@@ -4,7 +4,7 @@ const moment = require("moment");
 require("moment-duration-format");
 module.exports.run = async (bot, message) => {
   try {
-    let shardi = bot.shard.id + 1;
+//let shardi = bot.shard.id + 1;
 
     const duration = moment
       .duration(bot.uptime)
@@ -25,9 +25,9 @@ module.exports.run = async (bot, message) => {
         `%${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}`,
         true
       )
-      .addField(`Toplam Shard`, bot.shard.count, true)
-      .addField(`Bulunduğum Shard`, shardi, true)
-      .addField(`Genel Shard`, `${shardi}/${bot.shard.count}`, true)
+     // .addField(`Toplam Shard`, bot.shard.count, true)
+      //.addField(`Bulunduğum Shard`, shardi, true)
+     // .addField(`Genel Shard`, `${shardi}/${bot.shard.count}`, true)
       .addField(`Destek Sunucusu`, `[Tıkla!](https://discord.gg/f2VrDkR)`, true)
       .addField(`Botu Ekleyin`, `[Tıkla!](https://bit.ly/3g8ZRWE)`, true)
       .addField(`Bota Oy Verin`, `YAKINDA`, true)
