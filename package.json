@@ -7,7 +7,7 @@
   "description": "Juars.",
   "main": "bot.js",
   "scripts": {
-    "start": "node bot.js"
+    "start": "node shard.js"
   },
   "dependencies": {
     "chalk": "^4.1.0",
@@ -29,10 +29,10 @@
     "jimp": "^0.13.0"
   },
   "engines": {
-    "node": "8.x"
+    "node": "10.x"
   },
   "repository": {
-    "url": "https://discord.gg/mDH5fjZ"
+    "url": "https://discord.gg/f2VrDkR"
   },
   "license": "MIT",
   "keywords": [
