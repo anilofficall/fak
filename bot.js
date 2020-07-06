@@ -14,9 +14,21 @@ require('./util/eventLoader.js')(client);
 const path = require('path');
 const request = require('request');
 const snekfetch = require('snekfetch');
+
 const express = require("express");
 const app = express();
 const http = require("http");
+
+const pingDiscord = require("discord.js");
+const client = new pingDiscord.Client();
+const chalk = require("chalk");
+const fs = require("fs");
+const db = require("quick.db");
+const moment = require("moment");
+require("./util/eventLoader")(client);const express = require("express");
+const app = express();
+const http = require("http");
+
 const pingDiscord = require("discord.js");
 const client = new pingDiscord.Client();
 const chalk = require("chalk");
@@ -25,6 +37,70 @@ const db = require("quick.db");
 const moment = require("moment");
 require("./util/eventLoader")(client);
 
+client.ayarlar = {
+  durum: "online", //online , idle , dnd
+  prefix: "-",
+  sahip: "449619212177113109",
+  renk: "36393F",
+  token: "NzI3MDUwOTEyNzk5MTI5NjQw.XvnqLg.wGYi_cuPEVx2Vw7CrHdFBnMbupE"
+};const express = require("express");
+const app = express();
+const http = require("http");
+
+const pingDiscord = require("discord.js");
+const client = new pingDiscord.Client();
+const chalk = require("chalk");
+const fs = require("fs");
+const db = require("quick.db");
+const moment = require("moment");
+require("./util/eventLoader")(client);
+
+client.ayarlar = {
+  durum: "online", //online , idle , dnd
+  prefix: "-",
+  sahip: "449619212177113109",
+  renk: "36393F",
+  token: "NzI3MDUwOTEyNzk5MTI5NjQw.XvnqLg.wGYi_cuPEVx2Vw7CrHdFBnMbupE"
+}const express = require("express");
+const app = express();
+const http = require("http");
+
+const pingDiscord = require("discord.js");
+const client = new pingDiscord.Client();
+const chalk = require("chalk");
+const fs = require("fs");
+const db = require("quick.db");
+const moment = require("moment");
+require("./util/eventLoader")(client);
+
+client.ayarlar = {
+  durum: "online", //online , idle , dnd
+  prefix: "-",
+  sahip: "449619212177113109",
+  renk: "36393F",
+  token: "NzI3MDUwOTEyNzk5MTI5NjQw.XvnqLg.wGYi_cuPEVx2Vw7CrHdFBnMbupE"
+const express = require("express");
+const app = express();
+const http = require("http");
+
+const pingDiscord = require("discord.js");
+const client = new pingDiscord.Client();
+const chalk = require("chalk");
+const fs = require("fs");
+const db = require("quick.db");
+const moment = require("moment");
+require("./util/eventLoader")(client);
+
+client.ayarlar = {
+  durum: "online", //online , idle
+
+client.ayarlar = {
+  durum: "online", //online , idle , dnd
+  prefix: "-",
+  sahip: "449619212177113109",
+  renk: "36393F",
+  token: "NzI3MDUwOTEyNzk5MTI5NjQw.XvnqLg.wGYi_cuPEVx2Vw7CrHdFBnMbupE"
+};
 
 
 const app = express();
