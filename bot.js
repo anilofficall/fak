@@ -1,5 +1,3 @@
-
-   
 const express = require("express");
 const app = express();
 const http = require("http");
@@ -17,7 +15,7 @@ client.ayarlar = {
   prefix: "-",
   sahip: "449619212177113109",
   renk: "36393F",
-  token: "NzI4MzE4NzEwOTk3MDU3NjM3.XwNhYA.ls3dIteWj2-OEHgB2iIW0XSlRjA"
+  token: "NzI3MDUwOTEyNzk5MTI5NjQw.XvmOLw.g4qV-yYlbVWUK_yXgAgl_eojN6I"
 };
 
 client.ayar = db;
@@ -25,7 +23,7 @@ client.on("ready", async () => {
   client.appInfo = await client.fetchApplication();
   setInterval(async () => {
     client.appInfo = await client.fetchApplication();
-  }, 6000);
+  }, 60000);
   require("./index.js")(client);
   console.log("Konrol paneli aktif edildi!");
 });
@@ -187,6 +185,6 @@ setInterval(() => {
       return;
     }
   });
-}, 5000);
+}, 3000);
 
-client.login("NzI4MzE4NzEwOTk3MDU3NjM3.XwNhYA.ls3dIteWj2-OEHgB2iIW0XSlRjA");
+client.login("NzI3MDUwOTEyNzk5MTI5NjQw.XvmOLw.g4qV-yYlbVWUK_yXgAgl_eojN6I");
