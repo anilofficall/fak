@@ -1,4 +1,5 @@
-
+{}
+/*
 const Discord = require('discord.js');
 const bot = new Discord.Client()
 const ayarlar = require('./bot.js');
@@ -12,4 +13,4 @@ const shard = new Discord.ShardingManager('./bot.js', {
 shard.spawn(); 
 setTimeout(() => {
    shard.broadcastEval("process.exit()");
-}, 21600000);
+}, 21600000);*/

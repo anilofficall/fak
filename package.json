@@ -7,7 +7,7 @@
   "description": "Juars.",
   "main": "bot.js",
   "scripts": {
-    "start": "node shard.js"
+    "start": "node bot.js"
   },
   "dependencies": {
     "chalk": "^4.1.0",
@@ -29,7 +29,7 @@
     "jimp": "^0.13.0"
   },
   "engines": {
-    "node": "10.x"
+    "node": "8.x"
   },
   "repository": {
     "url": "https://discord.gg/f2VrDkR"
