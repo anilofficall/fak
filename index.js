@@ -90,7 +90,8 @@ module.exports = (client) => {
   app.get("/", (req, res) => {
 res.redirect("/anasayfa");
   });
- 
+
+
 
   app.get("/giris", (req, res, next) => {
     if (req.session.backURL) {
@@ -279,6 +280,14 @@ const guild = client.guilds.get(req.query.sunucu);
        res.redirect("/yonet?sunucu="+req.query.sunucu);
      }
   });
+  app.get("/istatistikler", (req, res) => {
+    var istatistik = {
+      sunucu: client.guilds.size+" sunucu",
+      kanal: client.channels.size+" kanal",
+      kullanıcı: client.users.size+" kullanıcı"
+    };
+    yukle(res, req, "istatistikler.ejs", {istatistik});
+  });
   
 
   app.get("/ekle", (req, res) => {
@@ -286,4 +295,5 @@ const guild = client.guilds.get(req.query.sunucu);
   });
 
   app.listen(3000);
-};
+}
+
