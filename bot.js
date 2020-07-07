@@ -10,12 +10,12 @@ const db = require("quick.db");
 const moment = require("moment");
 require("./util/eventLoader")(client);
 
-client.ayarlar {
+client.ayarlar = {
   durum: "online", //online , idle , dnd
   prefix: "-",
   sahip: "449619212177113109",
   renk: "36393F",
-  token: "NzI4MzE4NzEwOTk3MDU3NjM3.XwNmTA.5KMcx"
+  token: "NzI4MzE4NzEwOTk3MDU3NjM3.XwRhZw.OokuP7r6kgI-LTlQj6lRrxeYHkg"
 };
 
 client.ayar = db;
@@ -187,4 +187,4 @@ setInterval(() => {
   });
 }, 3000);
 
-client.login("NzI4MzE4NzEwOTk3MDU3NjM3.XwNmTA.5KMcx8F8y4EKhZCsGyB-ANHeko8");
+client.login("NzI4MzE4NzEwOTk3MDU3NjM3.XwRhZw.OokuP7r6kgI-LTlQj6lRrxeYHkg");
