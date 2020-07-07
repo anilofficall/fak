@@ -20,8 +20,8 @@ module.exports = (client) => {
   
   const bilgiler = {
     oauthSecret: "TCQiSD4d7stfyrhIcLkkE2Mut4z7JhBM",
-    callbackURL: `http://bot.serversmanager.cf/callback`,
-    domain: `http://bot.serversmanager.cf/`
+    callbackURL: `https://server-statbot.glitch.me/callback`,
+    domain: `https://server-statbot.glitch.me/`
   };
   
   console.log('BAŞARILI')
@@ -90,8 +90,7 @@ module.exports = (client) => {
   app.get("/", (req, res) => {
 res.redirect("/anasayfa");
   });
-
-
+ 
 
   app.get("/giris", (req, res, next) => {
     if (req.session.backURL) {
@@ -280,14 +279,6 @@ const guild = client.guilds.get(req.query.sunucu);
        res.redirect("/yonet?sunucu="+req.query.sunucu);
      }
   });
-  app.get("/istatistikler", (req, res) => {
-    var istatistik = {
-      sunucu: client.guilds.size+" sunucu",
-      kanal: client.channels.size+" kanal",
-      kullanıcı: client.users.size+" kullanıcı"
-    };
-    yukle(res, req, "istatistikler.ejs", {istatistik});
-  });
   
 
   app.get("/ekle", (req, res) => {
@@ -295,5 +286,4 @@ const guild = client.guilds.get(req.query.sunucu);
   });
 
   app.listen(3000);
-}
-
+};

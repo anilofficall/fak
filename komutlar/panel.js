@@ -1,27 +1,27 @@
-const Discord = require("discord.js");
-const db = require("quick.db");
+const Discord = require('discord.js');
+const db = require('quick.db');
 
-exports.run = async (client, message, args) => {
-  const Embed = new Discord.RichEmbed()
+exports.run = async(client, message, args) => {
+    const Embed = new Discord.RichEmbed()
     .setAuthor("Server Stat", client.user.avatarURL)
     .setTitle("Server Stat")
     .setColor("ORANGE")
     .setDescription("Sunucu İstatistiklerini Sunan Bir Botdur.")
-    .addField("Panelim", `http://bot.serversmanager.cf/`, true)
+    .addField("Panelim", `https://server-statbot.glitch.me/`,true)
     .setTimestamp()
-    .setFooter("© Server Stat", client.user.avatarURL);
-  message.channel.send(Embed);
-};
+    .setFooter("© Server Stat", client.user.avatarURL)
+    message.channel.send(Embed)
+    };
 
 exports.conf = {
-  enabled: true,
-  guildOnly: false,
-  aliases: [],
+  enabled: true, 
+  guildOnly: false, 
+  aliases: [], 
   permLevel: 0
 };
 
 exports.help = {
-  name: "panel",
-  description: "nblm",
-  usage: "panel"
+  name: 'panel', 
+  description: 'nblm', 
+  usage: 'panel' 
 };
