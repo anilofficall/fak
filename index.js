@@ -20,8 +20,8 @@ module.exports = (client) => {
   
   const bilgiler = {
     oauthSecret: "TCQiSD4d7stfyrhIcLkkE2Mut4z7JhBM",
-    callbackURL: `https://bot-serversmanage.glitch.me/callback`,
-    domain: `https://bot-serversmanage.glitch.me/`
+    callbackURL: `https://serversmanage-panel.sitesi.tv/callback`,
+    domain: `https://serversmanage-panel.sitesi.tv/`
   };
   
   console.log('BAŞARILI')
