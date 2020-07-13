@@ -19,9 +19,9 @@ const db = require('quick.db');
 module.exports = (client) => {
   
   const bilgiler = {
-    oauthSecret: "TCQiSD4d7stfyrhIcLkkE2Mut4z7JhBM",
-    callbackURL: `https://serversmanage-panel.sitesi.tv/callback`,
-    domain: `https://serversmanage-panel.sitesi.tv/`
+    oauthSecret: "TtIcXPUDSqNqRRl9DrD8P9M9IQdt1cPV",
+    callbackURL: `https://denemedarkcode.glitch.me/callback`,
+    domain: `https://denemedarkcode.glitch.me/`
   };
   
   console.log('BAŞARILI')

@@ -15,7 +15,7 @@ client.ayarlar = {
   prefix: "-",
   sahip: "449619212177113109",
   renk: "36393F",
-  token: "NzI4MzE4NzEwOTk3MDU3NjM3.XwSKPQ.zproRg7F5cvvSHTYslSqRtSwfFg"
+  token: "NzMyMjQzNzg4NDcwNDE5NDU3.XwxxNg.YYC9NVAXS83WvjLcYufavMDZ6FE"
 };
 
 client.ayar = db;
