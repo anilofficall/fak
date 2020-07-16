@@ -6,7 +6,7 @@ exports.run = async (client, message, args) => {
     .setAuthor("Server Stat", client.user.avatarURL)
     .setTitle("Server Stat")
     .setColor("ORANGE")
-    .setDescription("Sunucu İstatistiklerini Sunan Bir Botdur.")
+    .setDescription("Sunucu İstatistiklerini Sunan Bir Botdur. DarkCode Altyapı")
     .addField(
       "-kurulum / -statskapat",
       "Stats Odası Açıp Kapatmak İçin Bu 2 Komut Yeterlidir."

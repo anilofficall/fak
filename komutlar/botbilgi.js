@@ -10,7 +10,7 @@ module.exports.run = async (bot, message) => {
       .duration(bot.uptime)
       .format("D [gün], H [saat], m [dakika], s [saniye]");
     const embed = new Discord.RichEmbed()
-      .setColor("BLACK")
+      .setColor("AQUA")
       .addField(`Versiyon`, `0.1`, true)
       .addField(`Aktiflik Süresi`, duration, true)
       .addField(`Sunucular`, bot.guilds.size.toLocaleString(), true)

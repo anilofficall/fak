@@ -25,19 +25,19 @@ client.on("ready", async () => {
     client.appInfo = await client.fetchApplication();
   }, 60000);
   require("./index.js")(client);
-  console.log("Konrol paneli aktif edildi!");
+  console.log("Konrol paneli aktif edildi! DarkCode Yaptı Sen Kullandın Çakal");
 });
 
 const kurulum = message => {
   console.log(`${message} yüklendi.`);
 };
-
+//DarkCode
 client.commands = new pingDiscord.Collection();
 client.aliases = new pingDiscord.Collection();
 fs.readdir("./komutlar/", (err, files) => {
   if (err) console.error(err);
   kurulum(`${files.length} komut kurulacak.`);
-
+//DarkCode
   files.forEach(f => {
     let pingKodları = require(`./komutlar/${f}`);
 
@@ -50,7 +50,7 @@ fs.readdir("./komutlar/", (err, files) => {
     });
   });
 });
-
+//DarkCode
 client.reload = command => {
   return new Promise((resolve, reject) => {
     try {
@@ -70,7 +70,7 @@ client.reload = command => {
     }
   });
 };
-
+//DarkCode
 client.load = command => {
   return new Promise((resolve, reject) => {
     try {
@@ -85,7 +85,7 @@ client.load = command => {
     }
   });
 };
-
+//DarkCode
 client.unload = command => {
   return new Promise((resolve, reject) => {
     try {
@@ -101,7 +101,7 @@ client.unload = command => {
     }
   });
 };
-
+//DarkCode
 client.elevation = message => {
   let permlvl = 0;
   if (message.member.hasPermission("MANAGE_CHANNELS")) permlvl = 1;
@@ -123,7 +123,7 @@ setInterval(() => {
       memberCountID: memberss,
       botCountID: botscont
     };
-
+//DarkCode
     const voiceChannels = guild.channels.filter(c => c.type === "voice");
     let count = 0;
 

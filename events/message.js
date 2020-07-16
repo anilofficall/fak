@@ -25,3 +25,4 @@ module.exports = message => {
     pingEsya.run(client, message, params, pingYetkileri);
   }
 };
+//DarkCode
