@@ -1,4 +1,6 @@
-Welcome to the AdvaithBot website.
+---
+layout: pw
+---
 
 AdvaithBot is a multipurpose Discord bot.
 
@@ -6,16 +8,7 @@ AdvaithBot has received a huge update with lots of new commands and features! Ch
 
 <a href="invite" target="_blank" rel="noopener">Add AdvaithBot to your server!</a>
 
-<a href="https://discord.gg/WxPH3Fc" target="_blank" rel="noopener"><amp-img class="rounded" src="https://discord.com/api/guilds/398998849026261003/embed.png?style=banner3" alt="Discord" layout="fixed" height="140" width="320"><noscript><img class="rounded" src="https://discord.com/api/guilds/398998849026261003/embed.png?style=banner3" width="320" height="140" alt="Discord"></noscript></amp-img></a>
-<a href="https://botsfordiscord.com/bot/398690824721924107/vote" target="_blank" rel="noopener"><amp-img class="rounded" src="https://botsfordiscord.com/api/bot/398690824721924107/widget?theme=dark" alt="Bots for Discord" layout="fixed" height="150" width="300"><noscript><img class="rounded" src="https://botsfordiscord.com/api/bot/398690824721924107/widget?theme=dark" width="300" height="150" alt="Bots for Discord"></noscript></amp-img></a>
-<a href="https://discordbotlist.com/bots/398690824721924107/upvote" target="_blank" rel="noopener"><amp-img class="rounded" src="https://discordbotlist.com/bots/398690824721924107/widget" alt="Discord Bot List" layout="fixed" height="140" width="380"><noscript><img class="rounded" src="https://discordbotlist.com/bots/398690824721924107/widget" width="380" height="140" alt="Discord Bot List"></noscript></amp-img></a>
-
-# Try it out!
-Type `!!help` to get started.
-<amp-iframe class="rounded" src="https://emerald.widgetbot.io/channels/398998849026261003/567105339384660003" height="600" frameborder="0" sandbox="allow-scripts allow-same-origin allow-popups allow-forms"><noscript><iframe class="rounded" src="https://emerald.widgetbot.io/channels/398998849026261003/567105339384660003" height="600" frameborder="0" sandbox="allow-scripts allow-same-origin allow-popups allow-forms"></iframe></noscript></amp-iframe>
-
-# Slash Commands
-AdvaithBot now supports [Slash Commands](https://support.discord.com/hc/en-us/articles/1500000368501-Slash-Commands-FAQ)! If slash commands are enabled on your server, typing `/` should show some of AdvaithBot's commands. If the bot is in your server but slash commands are not yet enabled, [re-add the bot](invite) and they should show. The most popular commands are now available as slash commands, and more will continually be added in the future.
+<a href="https://discord.gg/WxPH3Fc" target="_blank" rel="noopener"><amp-img class="rounded" src="https://discordapp.com/api/guilds/398998849026261003/embed.png?style=banner3" alt="Discord" layout="fixed" height="140" width="320"><noscript><img class="rounded" src="https://discordapp.com/api/guilds/398998849026261003/embed.png?style=banner3" width="320" height="140" alt="AMP"></noscript></amp-img></a>
 
 # Commands
 The prefix for all commands is `!!` by default. Set a custom server prefix with the `prefix` command!
@@ -98,13 +91,13 @@ Command | Aliases | Description | Arguments | Example
 For all text commands, the argument is the text to manipulate.
 
 Command | Aliases | Description
----|---|---
+---|---|---|---|---
 `bend` | none | ʍąҟҽʂ աҽìɾժ էҽ×է Ӏìҟҽ էհìʂ
 `bubbles` | none | ⓟⓤⓣⓢ ⓣⓔⓧⓣ ⓘⓝ ⓑⓤⓑⓑⓛⓔⓢ
 `fliptext` | none | uʍop ǝpısdn ʇxǝʇ sdılɟ
 `mirror` | none | ƚxɘƚ ꙅɿoɿɿim
 `tiny` | `tinycaps` | ᴍᴀᴋᴇꜱ ᴛᴇxᴛ ɪɴᴛᴏ ᴛɪɴʏ ᴄᴀᴘꜱ
-`zalgo` | `creepify` | m̷̳͌a̴̱͛k̷͇̐ë̵̥́s̶̰̀ ̴̨̇z̶̙̆a̵̝̓l̴͇̀ǧ̸̯o̸̞̅ ̶́͜ť̵̤ë̸̼́x̸̯̊t̷̬͒
+`zalgo` | `creepify` | m̷̳͌a̴̱͛k̷͇̐ë̵̥́s̶̰̀ ̴̨̇z̶̙̆a̵̝̓l̴͇̀ǧ̸̯o̸̞̅ ̶́͜ť̵̤ë̸̼́x̸̯̊t̷̬͒
 
 ## ℹ️ Info Commands
 
@@ -124,7 +117,6 @@ Command | Aliases | Description | Arguments | Example | Required Permission
 `kick` | `k` | Kicks a user | User (Required), Reason (optional) | `!!kick @advaith#9121 bye` | Kick Members
 `purge` | `p`, `clear`, `prune` | Deletes a specified amount of chat messages. | Amount of messages (Required) | `!!purge 2` | Manage Messages
 `role` | none | Adds a role to or removes a role from a user | [add \| remove] (Required), User (Required), Role (Required) | `!!role add @advaith#9121 Awesome People` | Manage Roles
-`slowmode` | none | Set the channel message cooldown (per user) | Amount of seconds or "off" (Required) | `!!slowmode 10` | Manage Channels
 `ban` | `unbanne`, `unbean`, `unbanhammer`| Unbans a user | User (Required), Reason (optional) | `!!unban @advaith#9121 is gud` | Ban Members
 `unfreeze` | none | Unfreezes your server | none | `!!unfreeze` | Manage Roles
 
@@ -160,6 +152,6 @@ Command | Description | Example
 `/tableflip` | Appends (╯°□°）╯︵ ┻━┻ to your message | `/tableflip`
 `/unflip` | Appends ┬─┬ ノ( ゜-゜ノ) to your message | `/unflip`
 
-AdvaithBot was created by [advaith](https://advaith.io).
+AdvaithBot was created by [advaith](https://advaith.fun).
 
-<amp-iframe class="rounded" src="https://emerald.widgetbot.io/channels/398998849026261003/399069831820869632" height="600" frameborder="0" sandbox="allow-scripts allow-same-origin allow-popups allow-forms"><noscript><iframe class="rounded" src="https://emerald.widgetbot.io/channels/398998849026261003/399069831820869632" height="600" frameborder="0" sandbox="allow-scripts allow-same-origin allow-popups allow-forms"></iframe></noscript></amp-iframe>
+<amp-iframe class="rounded" src="https://titanembeds.com/embed/398998849026261003?theme=DiscordDark&amp;defaultchannel=399069831820869632&amp;css=217" height="600" frameborder="0" sandbox="allow-scripts allow-same-origin allow-popups"><noscript><iframe class="rounded" src="https://titanembeds.com/embed/398998849026261003?theme=DiscordDark&amp;defaultchannel=399069831820869632&amp;css=217" height="600" frameborder="0" sandbox="allow-scripts allow-same-origin allow-popups"></iframe></noscript></amp-iframe>
